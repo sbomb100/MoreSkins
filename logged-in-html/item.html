@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoreSkins - Item Inspection</title>
+    <link rel="stylesheet" href="../css/item.css">
+</head>
+<body>
+    <div class="navbar">
+        <button class="profile-btn">Profile</button>
+        <button class="crates-btn">Crates</button>
+        <div>
+            <span class="logo"></span>
+            <strong>MoreSkins</strong>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search User">
+        <span>Balance: $0.10</span>
+        <button class="logout-btn">Log Out</button>
+    </div>
+    
+    <div class="container">
+        <div class="item-inspection">
+            <h2>Viewing <strong>Skin Name</strong></h2>
+            <div class="item-image"></div>
+            <div class="info-box">
+                <p>Gun Name</p>
+                <p>Crate Name</p>
+                <p>Skin Name</p>
+                <p>Estimated Value: $1.00</p>
+                <button class="sell-btn">Sell</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="dropChancePopup" class="popup">
+        <strong>Percent Drop Chance</strong>
+        <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
+        <button onclick="closePopup('dropChancePopup')">Close</button>
+    </div>
+    
+    <div id="tradeRequestPopup" class="popup">
+        <strong>Trade Requests</strong>
+        <p>Trade Accepted by UserName2</p>
+        <p>Request from UserName</p>
+        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+    </div>
+    
+    <div class="footer">
+        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span>Copyright Label</span>
+        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </div>
+    
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+You will include real content for your four pages (no Lorem ipsum). 
+If your wireframes called for a paragraph of text, write a real paragraph of text. 
+You can use images downloaded from other sites for this project, but you must credit the source of each using HTML or CSS comments.
+
+To gain experience translating a wireframe into a mockup, you will produce one HTML page for each wireframe from Project 1, 
+for a total of at least 5 HTML pages.
+
+Your HTML pages should use semantic, standards-compliant markup, using either the XHTML 1.1 or HTML5 doctypes. 
+As discussed in class, semantic markup means you are using HTML markup that matches your content: 
+paragraphs are enclosed in <p> tags; 
+main headings use <h1> tags, etc. 
+Standards-compliant means the HTML validates.
+
+The following elements should be included:
+
+    At least five different HTML elements
+    At least two images
+    At least one form, two different form inputs (e.g. textbox, textarea, checkboxes) and one button
+    A primary navigation menu
+
+Since this is an interactive prototype, your HTML pages should be hyperlinked to each other, so be sure your prototype contains a reasonable navigation system to allow this.

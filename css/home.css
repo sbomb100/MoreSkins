@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.navbar, .footer {
+    background: #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    padding: 20px;
+}
+.search-bar, .user-search {
+    width: 50%;
+    padding: 8px;
+    margin: 10px 0;
+}
+.profile-btn, .crates-btn, .logout-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    background: gray;
+    display: inline-block;
+}
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.popup button {
+    margin-top: 10px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

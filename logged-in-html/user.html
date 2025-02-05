@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoreSkins - User Profile</title>
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+    <header class="header">
+        <button class="profile-btn">Profile</button>
+        <button class="crates-btn">Crates</button>
+        <div>
+            <span class="logo"></span>
+            <strong>MoreSkins</strong>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search User">
+        <span>Balance: $0.10</span>
+        <button class="logout-btn">Log Out</button>
+    </header>
+    
+    <div class="container">
+        <div class="profile-section">
+            <h2>UserName</h2>
+            <p>Total Worth: $5.23</p>
+            <button>Send Trade Offer</button>
+            
+            <div class="showcase">
+                <h3>UserName's Showcase</h3>
+                <div class="logo" style="width:80px; height:80px; display:inline-block;"></div>
+                <div class="logo" style="width:80px; height:80px; display:inline-block;"></div>
+                <div class="logo" style="width:80px; height:80px; display:inline-block;"></div>
+                <div class="logo" style="width:80px; height:80px; display:inline-block;"></div>
+                <div class="logo" style="width:80px; height:80px; display:inline-block;"></div>
+            </div>
+            
+            <div class="recent-activity">
+                <h3>UserName's Recent Activity</h3>
+                <p>Username Unboxed a _____</p>
+                <p>Username Unboxed a _____</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="dropChancePopup" class="popup">
+        <strong>Percent Drop Chance</strong>
+        <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
+        <button onclick="closePopup('dropChancePopup')">Close</button>
+    </div>
+    
+    <div id="tradeRequestPopup" class="popup">
+        <strong>Trade Requests</strong>
+        <p>Trade Accepted by UserName2</p>
+        <p>Request from UserName</p>
+        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+    </div>
+    
+    <div class="footer">
+        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span>Copyright Label</span>
+        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </div>
+    
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>
