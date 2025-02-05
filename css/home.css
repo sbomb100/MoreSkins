@@ -3,10 +3,13 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
 }
-.navbar, .footer {
+.header, .footer {
     background: #ddd;
-    padding: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,11 +22,16 @@ body {
     padding: 8px;
     margin: 10px 0;
 }
+
+.home_logo_container{
+    align-self: center;
+    display: flex;
+}
 .profile-btn, .crates-btn, .logout-btn {
     padding: 5px 10px;
     margin: 5px;
     border: 1px solid #000;
-    background: #fff;
+    background: #ffffff;
     cursor: pointer;
 }
 .logo {
@@ -40,6 +48,7 @@ body {
     display: inline-block;
     width: 200px;
 }
+
 .popup {
     display: none;
     position: fixed;
@@ -54,10 +63,15 @@ body {
 .popup button {
     margin-top: 10px;
 }
+
 .footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    height: 5%;
     display: flex;
     justify-content: space-between;
+}
+
+.footer button{
+    margin: 15px;
 }
