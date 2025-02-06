@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoreSkins - Crate Opening</title>
+    <link rel="stylesheet" href="../css/crate.css">
+</head>
+<body>
+    <header class="header">
+
+        <a class="profile-btn" href="./user.html">Profile</a>
+        <a class="crates-btn" href="./list_crates.html">Crates</a>
+        <div class="header_logo">
+            <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
+            <a href="./home.html">MoreSkins</a>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search User">
+        <span>Balance: $0.10</span>
+        <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+    </header>
+    
+    <div class="container">
+        <h2>Crate Opening</h2>
+        <div class="crate">
+            <h3>Crate Name</h3>
+            <div class="item-grid">
+                <div class="item common">Common Item</div>
+                <div class="item uncommon">Uncommon Item</div>
+                <div class="item rare">Rare Item</div>
+                <div class="item epic">Epic Item</div>
+                <div class="item legendary">Legendary Item</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="dropChancePopup" class="popup">
+        <strong>Percent Drop Chance</strong>
+        <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
+        <button onclick="closePopup('dropChancePopup')">Close</button>
+    </div>
+    
+    <div id="tradeRequestPopup" class="popup">
+        <strong>Trade Requests</strong>
+        <p>Trade Accepted by UserName2</p>
+        <p>Request from UserName</p>
+        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+    </div>
+    
+    <div class="footer">
+        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span>Copyright Label</span>
+        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </div>
+    
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

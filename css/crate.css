@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.header, .footer {
+    background: #ddd;
+    padding: 10px 0 ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-bar, .user-search {
+    width: 50%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.home_logo_container{
+    align-self: center;
+    display: flex;
+}
+.profile-btn, .crates-btn, .logout-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #ffffff;
+    cursor: pointer;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    background: gray;
+    display: inline-block;
+}
+.container {
+    padding: 20px;
+}
+.crate {
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    background: #f0f0f0;
+}
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+.item {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.common { border: 2px solid gray; background: lightgray; }
+.uncommon { border: 2px solid green; background: #aaffaa; }
+.rare { border: 2px solid blue; background: #aaaaff; }
+.epic { border: 2px solid purple; background: #cc99ff; }
+.legendary { border: 2px solid gold; background: #ffcc00; }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.popup button {
+    margin-top: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer button{
+    margin: 15px;
+}

@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
 }
 .header, .footer {
     background: #ddd;
@@ -11,6 +14,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.container {
+    padding: 20px;
 }
 .search-bar, .user-search {
     width: 50%;
@@ -35,37 +41,24 @@ body {
     background: gray;
     display: inline-block;
 }
-.container {
+
+.crate-grid {
+    display: grid;
+    grid-template-columns: repeat(4,  minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    background: #000;
     padding: 20px;
 }
-.profile-section {
-    text-align: left;
-    max-width: 800px;
-    margin: auto;
-}
-.showcase, .recent-activity {
-    border: 1px solid #000;
-    padding: 10px;
-    margin-top: 10px;
-}
-.search-bar, .user-search {
-    width: 50%;
-    padding: 8px;
-    margin: 10px 0;
-}
-.profile-btn, .crates-btn, .logout-btn {
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid #000;
-    background: #fff;
+.crate {
+    border: 2px solid black;
+    padding: 20px;
+    background: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
     cursor: pointer;
 }
-.logo {
-    width: 50px;
-    height: 50px;
-    background: gray;
-    display: inline-block;
-}
+
 .popup {
     display: none;
     position: fixed;
@@ -80,6 +73,8 @@ body {
 .popup button {
     margin-top: 10px;
 }
+
+
 .footer button{
     margin: 15px;
 }

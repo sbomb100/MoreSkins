@@ -4,12 +4,35 @@ body {
     padding: 0;
     text-align: center;
 }
-.navbar, .footer {
+.header, .footer {
     background: #ddd;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.search-bar, .user-search {
+    width: 50%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.home_logo_container{
+    align-self: center;
+    display: flex;
+}
+.profile-btn, .crates-btn, .logout-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #ffffff;
+    cursor: pointer;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    background: gray;
+    display: inline-block;
 }
 .container {
     padding: 20px;
