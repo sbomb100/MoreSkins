@@ -8,13 +8,13 @@
 </head>
 <body>
     <header class="header">
-
-        <a class="profile-btn" href="./user.html">Profile</a>
-        <a class="crates-btn" href="./crates.html">Crates</a>
-        <div class="header_logo">
+        <div class="home_logo_container">
             <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
             <a href="./home.html">MoreSkins</a>
         </div>
+        <a class="profile-btn" href="./user.html">Profile</a>
+        <a class="crates-btn" href="./list_crates.html">Crates</a>
+        
         <input type="text" class="search-bar" placeholder="Search User">
         <span>Balance: $0.10</span>
         <a class="logout-btn" href="../logged-in-html/home.html">Log In</a>
@@ -25,8 +25,12 @@
             <img class="logo" src="../assets/images/moreskins.png" style="width:100px; height:100px;"></img>
             <h1>MoreSkins</h1>
         </div>
-        <p>Risk it for the Digital Biscuit</p>
-        <input type="text" class="user-search" placeholder="Search for a User">
+        <p style="font-weight: bold;">Risk it for the Digital Biscuit</p>
+        <div class="home_logo_container">
+            <input type="text" class="user-search" placeholder="Search for a User">
+            <a href="user.html">Search</a>
+        </div>
+        
     </div>
     
     <div id="dropChancePopup" class="popup">
