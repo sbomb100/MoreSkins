@@ -66,6 +66,32 @@ body {
     background: gray;
     display: inline-block;
 }
+.activity-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-justify: center;
+}
+.user-activity {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+.user-activity img {
+    width: 75px;
+    height: 75px;
+    background: gray;
+    display: inline-block;
+}
+.cost{
+    margin-left: auto;
+}
+    
+
 .popup {
     display: none;
     position: fixed;
