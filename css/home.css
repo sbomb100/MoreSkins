@@ -6,34 +6,37 @@ body {
     align-items: center;
     display:flex;
     flex-direction: column;
+    background-color: #D8B4A0;
+    color: #223843;
 }
 .header, .footer {
-    background: #ddd;
+    background: #454545;
+    color: #EFF1F3;
     padding: 10px 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes the link use the surrounding text color */
+}
+button {
+    background: #223843;
+    border: 1px solid #000;
+    color: #EFF1F3;
+    padding: 5px 10px;
+}
 .container {
     padding: 20px;
+    padding-top: 10%;
+    font-size: 30px;
 }
-.search-bar, .user-search {
+.search-bar {
     width: 50%;
     padding: 8px;
     margin: 10px 0;
-}
-
-.home_logo_container{
-    align-self: center;
-    display: flex;
-}
-.profile-btn, .crates-btn, .logout-btn {
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid #000;
-    background: #ffffff;
-    cursor: pointer;
 }
 .logo {
     width: 50px;
@@ -41,15 +44,6 @@ body {
     background: gray;
     display: inline-block;
 }
-.box {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    text-align: left;
-    display: inline-block;
-    width: 200px;
-}
-
 .popup {
     display: none;
     position: fixed;
@@ -76,3 +70,33 @@ body {
 .footer button{
     margin: 15px;
 }
+
+.user-search {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+.home_logo_container{
+    align-self: center;
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+    align-items: center;
+}
+.profile-btn, .crates-btn, .logout-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #223843;
+    cursor: pointer;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+}
+

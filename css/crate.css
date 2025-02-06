@@ -3,72 +3,38 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #D8B4A0;
+    color: #223843;
 }
 .header, .footer {
-    background: #ddd;
-    padding: 10px 0 ;
+    background: #454545;
+    color: #EFF1F3;
+    padding: 10px 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.search-bar, .user-search {
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes the link use the surrounding text color */
+}
+button {
+    background: #223843;
+    border: 1px solid #000;
+    color: #EFF1F3;
+    padding: 5px 10px;
+}
+.search-bar {
     width: 50%;
     padding: 8px;
     margin: 10px 0;
-}
-
-.home_logo_container{
-    align-self: center;
-    display: flex;
-}
-.profile-btn, .crates-btn, .logout-btn {
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid #000;
-    background: #ffffff;
-    cursor: pointer;
 }
 .logo {
     width: 50px;
     height: 50px;
     background: gray;
     display: inline-block;
-}
-.container {
-    padding: 20px;
-}
-.crate {
-    border: 2px solid black;
-    padding: 20px;
-    margin: auto;
-    width: 80%;
-    background: #f0f0f0;
-}
-.item-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-}
-.item {
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-}
-.common { border: 2px solid gray; background: lightgray; }
-.uncommon { border: 2px solid green; background: #aaffaa; }
-.rare { border: 2px solid blue; background: #aaaaff; }
-.epic { border: 2px solid purple; background: #cc99ff; }
-.legendary { border: 2px solid gold; background: #ffcc00; }
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 .popup {
     display: none;
@@ -96,3 +62,70 @@ body {
 .footer button{
     margin: 15px;
 }
+.home_logo_container{
+    align-self: center;
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+    align-items: center;
+}
+.profile-btn, .crates-btn, .logout-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #223843;
+    cursor: pointer;
+}
+.container {
+    padding: 20px;
+}
+.crate {
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    max-width: 50%;
+}
+.crate-img {
+    width: 150px;
+    height: 150px;
+    background: gray;
+    display: inline-block;
+}
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+.item {
+    padding: 40px 30px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(34, 4, 141);
+}
+.crate-header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.buy-button{
+    background-color: #ff0000;
+    color:#ffffff;
+    font-weight: bold;
+    padding: 20px 10px;
+    margin-top: 25px;;
+}
+
+.common { border: 2px solid rgb(0, 4, 255); background: #21deff; }
+.uncommon { border: 2px solid rgb(98, 0, 255); background: #a288ff; }
+.rare { border: 2px solid rgb(255, 0, 179); background: #cf6bd3; }
+.epic { border: 2px solid rgb(168, 11, 11); background: #eb6262; }
+.legendary { border: 2px solid gold; background: #ffe57b; }
+.owned {border: 2px solid rgb(255, 0, 0);}
