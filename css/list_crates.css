@@ -22,11 +22,11 @@ body {
 
 .crate-grid {
     display: grid;
-    grid-template-columns: repeat(3,  minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill,  minmax(220px, 1fr));
     max-width: 75%;
     max-height: 60vh;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     margin: 0 auto;
     gap: 10px;
     margin-top: 20px;
@@ -36,9 +36,25 @@ body {
 }
 .crate {
     border: 2px solid rgb(0, 0, 0);
-    padding: 50px 20px;
+    width: 150px;
+    height:150px;
     background: #fceeee;
     text-align: center;
-    font-weight: bold;
     cursor: pointer;
+    margin: auto;
+}
+.crate-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #DBD3D8;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 5px;
+    width: 200px;
+}
+.crate-box button{
+    margin: auto;
+    background-color: #bb0909;
+    border-radius: 5px;
+    width: 120px;
 }
