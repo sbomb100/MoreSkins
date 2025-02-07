@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoreSkins</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>MoreSkins - Crate Opening</title>
+    <link rel="stylesheet" href="../css/crate.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
             <a href="./home.html">MoreSkins</a>
         </div>
         <div class="nav-box">
+            <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
             <input type="text" class="search-bar" placeholder="Search User">
             <a class="crates-btn" href="./user.html">Search</a>
@@ -25,16 +26,30 @@
     </header>
     
     <div class="container">
-        <div class="home_logo_container">
-            <img class="logo" src="../assets/images/moreskins.png" style="width:100px; height:100px;"></img>
-            <h1>MoreSkins</h1>
+        <div class="crate-header">
+            <span>The __ Crate</span>
+            <span style="margin-left: 5%;">You Need To Be Signed In To Open Crates</span>
         </div>
-        <p style="font-weight: bold;"">Risk it for the Digital Biscuit</p>
-        <div class="home_logo_container">
-            <input type="text" class="user-search" placeholder="Search for a User">
-            <a href="user.html">Search</a>
+        <img class="crate-img"></img>
+
+        <div class="crate item-grid">
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item epic">Epic Item</a>
+            <a href="item.html" class="item legendary">Legendary Item</a>            
         </div>
-        
+
+        <a class="buy-button" href="./signin.html" >Sign In to Open</a>
     </div>
     
     <div id="dropChancePopup" class="popup">
@@ -63,7 +78,6 @@
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
         }
-        
     </script>
 </body>
 </html>

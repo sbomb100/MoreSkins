@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoreSkins</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>MoreSkins - Item Inspection</title>
+    <link rel="stylesheet" href="../css/item.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
@@ -25,16 +25,16 @@
     </header>
     
     <div class="container">
-        <div class="home_logo_container">
-            <img class="logo" src="../assets/images/moreskins.png" style="width:100px; height:100px;"></img>
-            <h1>MoreSkins</h1>
+        <div class="item-inspection">
+            <h2>Viewing <strong>Skin Name</strong></h2>
+            <div class="item-image"></div>
+            <div class="info-box">
+                <p>Gun Name</p>
+                <p>Crate Name</p>
+                <p>Skin Name</p>
+                <p>Estimated Value: $1.00</p>
+            </div>
         </div>
-        <p style="font-weight: bold;"">Risk it for the Digital Biscuit</p>
-        <div class="home_logo_container">
-            <input type="text" class="user-search" placeholder="Search for a User">
-            <a href="user.html">Search</a>
-        </div>
-        
     </div>
     
     <div id="dropChancePopup" class="popup">
@@ -63,7 +63,6 @@
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
         }
-        
     </script>
 </body>
 </html>
