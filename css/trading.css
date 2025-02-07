@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #D8B4A0;
+    color: #223843;
+}
+.container {
+    min-height: 80vh;
+    overflow: auto;
+    border-radius: 10px;
+}
+.trading-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.trade-box {
+    border: 2px solid black;
+    padding: 10px;
+    background: #f0f0f0;
+    text-align: center;
+    width: 40%;
+    min-height: 200px;
+    
+}
+.skins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    max-height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+.skin {
+    min-width: 80px;
+    min-height: 80px;
+    margin: 5px;
+    background: lightgray;
+    border: 2px solid black;
+}
+.trade-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.offer-box{
+    display:flex;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoreSkins - Trading</title>
+    <link rel="stylesheet" href="../css/trading.css">
+    <link rel="stylesheet" href="../css/headfoot.css">
+</head>
+<body>
+    <header class="header">
+        <div class="home_logo_container">
+            <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
+            <a href="./home.html">MoreSkins</a>
+        </div>
+        <div class="nav-box">
+            <a class="profile-btn" href="./user.html">Profile</a>
+            <a class="crates-btn" href="./list_crates.html">Crates</a>
+            <input type="text" class="search-bar" placeholder="Search User">
+        </div>
+        <div class="user-box">
+            <span>Balance: $0.10</span>
+            <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2>Trading</h2>
+        <p>Select the skin(s) you wish to trade!</p>
+        
+        <div class="trading-section">
+            <div class="trade-box">
+                <h3>Your Skins</h3>
+                <div class="skins-grid">
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                </div>
+            </div>
+            <div class="trade-box">
+                <h3>sbomb100's Skins</h3>
+                <div class="skins-grid">
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                </div>
+            </div>
+            <div class="trade-box">
+                <h3>Your Offer</h3>
+                <div class="offer-box">
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    
+                </div>
+                <span>Total Value: $___</span>
+            </div>
+            <div class="trade-box">
+                <h3>sbomb100's Offer</h3>
+                <div class="offer-box">
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                    <div class="skin"></div>
+                </div>
+                <span>Total Value: $___</span>
+            </div>
+        </div>
+        
+        <button class="trade-button">Send Trade Offer</button>
+    </div>
+    
+    <div id="dropChancePopup" class="popup">
+        <strong>Percent Drop Chance</strong>
+        <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
+        <button onclick="closePopup('dropChancePopup')">Close</button>
+    </div>
+    
+    <div id="tradeRequestPopup" class="popup">
+        <strong>Trade Requests</strong>
+        <p>Trade Accepted by UserName2</p>
+        <p>Request from UserName</p>
+        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+    </div>
+    
+    <div class="footer">
+        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span>Copyright Label</span>
+        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </div>
+    
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoreSkins</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>MoreSkins - Crate Opening</title>
     <link rel="stylesheet" href="../css/headfoot.css">
+    <link rel="stylesheet" href="../css/spinner.css">
 </head>
 <body>
     <header class="header">
@@ -26,17 +26,35 @@
     </header>
     
     <div class="container">
-        <div class="home_logo_container">
-            <img class="logo" src="../assets/images/moreskins.png" style="width:100px; height:100px;"></img>
-            <h1>MoreSkins</h1>
-        </div>
-        <p style="font-weight: bold;"">Risk it for the Digital Biscuit</p>
-        <div class="home_logo_container">
-            <input type="text" class="user-search" placeholder="Search for a User">
-            <a href="user.html">Search</a>
-        </div>
+        <h2>Clutch Crate</h2>
+        <a href="./crates.html" class="skin" style="margin: 0 auto;">Crate Pic</a>
+        <p>To Open the Crate, Click the Button at the Bottom</p>
         
+        <div class="spin-container">
+            <div class="spin-box" id="spinBox">
+                <a href="./item.html" class="skin">Skin 1</a>
+                <a href="./item.html" class="skin">Skin 2</a>
+                <a href="./item.html" class="skin">Skin 3</a>
+                <a href="./item.html" class="skin">Skin 4</a>
+                <a href="./item.html" class="skin">Skin 5</a>
+                <a href="./item.html" class="skin">Skin 1</a>
+                <a href="./item.html" class="skin">Skin 2</a>
+                <a href="./item.html" class="skin">Skin 3</a>
+                <a href="./item.html" class="skin">Skin 4</a>
+                <a href="./item.html" class="skin">Skin 5</a>
+                <a href="./item.html" class="skin">Skin 1</a>
+                <a href="./item.html" class="skin">Skin 2</a>
+                <a href="./item.html" class="skin">Skin 3</a>
+                <a href="./item.html"class="skin">Skin 4</a>
+                <a href="./item.html" class="skin">Skin 5</a>
+            </div>
+        </div>
+        <h1 style="margin: 0 auto;">/\</h1>
+        <div class="buttons">
+            <button onclick="startSpin()">Open Crate</button>
+        </div>
     </div>
+    
     
     <div id="dropChancePopup" class="popup">
         <strong>Percent Drop Chance</strong>
@@ -46,8 +64,8 @@
     
     <div id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
-        <p>Trade Accepted by UserName2</p>
-        <p>Request from UserName</p>
+        <p>Trade Accepted by sbomb1002</p>
+        <p>Request from sbomb100</p>
         <button onclick="closePopup('tradeRequestPopup')">Close</button>
     </div>
     
@@ -63,6 +81,11 @@
         }
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
+        }
+        function startSpin() {
+            const spinBox = document.getElementById("spinBox");
+            let randomOffset = -((Math.floor(Math.random() * 5)) * 170); // Adjust for skin width + margin
+            spinBox.style.transform = `translateX(${randomOffset}px)`;
         }
     </script>
 </body>

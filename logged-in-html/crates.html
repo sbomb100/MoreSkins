@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - Crate Opening</title>
     <link rel="stylesheet" href="../css/crate.css">
+    <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
     <header class="header">
@@ -12,12 +13,15 @@
             <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
             <a href="./home.html">MoreSkins</a>
         </div>
-        <a class="profile-btn" href="./user.html">Profile</a>
-        <a class="crates-btn" href="./list_crates.html">Crates</a>
-        
-        <input type="text" class="search-bar" placeholder="Search User">
-        <span>Balance: $0.10</span>
-        <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+        <div class="nav-box">
+            <a class="profile-btn" href="./user.html">Profile</a>
+            <a class="crates-btn" href="./list_crates.html">Crates</a>
+            <input type="text" class="search-bar" placeholder="Search User">
+        </div>
+        <div class="user-box">
+            <span>Balance: $0.10</span>
+            <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+        </div>
     </header>
     
     <div class="container">
@@ -28,23 +32,23 @@
         <img class="crate-img"></img>
 
         <div class="crate item-grid">
-            <div class="item common">Common Item</div>
-            <div class="item common">Common Item</div>
-            <div class="item common">Common Item</div>
-            <div class="item common">Common Item</div>
-            <div class="item common">Common Item</div>
-            <div class="item common">Common Item</div>
-            <div class="item uncommon">Uncommon Item</div>
-            <div class="item uncommon">Uncommon Item</div>
-            <div class="item uncommon">Uncommon Item</div>
-            <div class="item uncommon">Uncommon Item</div>
-            <div class="item rare">Rare Item</div>
-            <div class="item rare">Rare Item</div>
-            <div class="item epic">Epic Item</div>
-            <div class="item legendary">Legendary Item</div>            
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item epic">Epic Item</a>
+            <a href="item.html" class="item legendary">Legendary Item</a>            
         </div>
 
-        <button class="buy-button">OPEN FOR $0.10</button>
+        <a class="buy-button" href="./spin-item.html" >OPEN FOR $0.10</a>
     </div>
     
     <div id="dropChancePopup" class="popup">
