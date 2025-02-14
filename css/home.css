@@ -3,28 +3,103 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    align-items: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background-color: #D8B4A0;
-    color: #223843;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
+
+.user-box {
+    font-size: 14px;
+}
+
+/* SEARCH & CONTAINER */
 .container {
     padding: 20px;
-    padding-top: 10%;
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 24px;
+    max-width: 90%;
+    min-height: 450px;
 }
+
 .user-search {
     width: 100%;
-    padding: 8px;
-    margin: 10px 0;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
 }
+
+.search-button {
+    font-size: 14px;
+    background-color: var(--secondary-color);
+    color: #EFF1F3;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+}
+
+/* BOXES */
 .box {
     border: 1px solid black;
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     text-align: left;
-    display: inline-block;
-    width: 200px;
+    display: block;
+    max-width: 90%;
 }
 
+/* POPUPS */
+.popup {
+    display: none;
+    position: fixed;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+   
+
+    .nav-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .user-box {
+        text-align: center;
+    }
+
+    .container {
+        font-size: 20px;
+        padding-top: 10%;
+    }
+    .home_logo_container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .search-button {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+    }
+
+    .container {
+        font-size: 18px;
+    }
+
+}

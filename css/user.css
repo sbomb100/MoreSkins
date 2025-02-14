@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #D8B4A0;
-    color: #223843;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .container {
     padding: 20px;

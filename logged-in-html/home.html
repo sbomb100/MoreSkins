@@ -16,8 +16,10 @@
         <div class="nav-box">
             <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
+        </div>
+        <div class="search-box">
             <input type="text" class="search-bar" placeholder="Search User">
-            <a class="crates-btn" href="./user.html">Search</a>
+            <a class="logout-btn" href="./user.html">Search</a>
         </div>
         <div class="user-box">
             <span>Balance: $0.10</span>
@@ -26,14 +28,14 @@
     </header>
     
     <div class="container">
-        <div class="home_logo_container">
-            <img class="logo" src="../assets/images/moreskins.png" style="width:100px; height:100px;"></img>
+        <div class="home_logo_container" style="gap: 20px; margin: 5px;">
+            <img class="logo" src="../assets/images/moreskins.png" style="width:120px; height:110px;"></img>
             <h1>MoreSkins</h1>
         </div>
         <p style="font-weight: bold;">Risk it for the Digital Biscuit</p>
         <div class="home_logo_container">
             <input type="text" class="user-search" placeholder="Search for a User">
-            <a href="user.html">Search</a>
+            <a class="search-button" href="user.html">Search</a>
         </div>
         
     </div>
@@ -52,9 +54,9 @@
     </div>
     
     <div class="footer">
-        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
-        <span>Copyright Label</span>
-        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+        <button id="drop" onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span id="copyright">Copyright Label</span>
+        <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
     </div>
     
     <script>

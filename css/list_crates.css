@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #D8B4A0;
-    color: #223843;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .container {
     padding: 20px;
@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     gap: 10px;
     margin-top: 20px;
-    background: #454545;
+    background: var(--tertiary-color);
     padding: 20px;
     border-radius: 10px;
 }
@@ -46,7 +46,7 @@ body {
 .crate-box{
     display: flex;
     flex-direction: column;
-    background-color: #DBD3D8;
+    background-color: var(--crate-background);
     border-radius: 10px;
     padding: 10px;
     gap: 5px;
