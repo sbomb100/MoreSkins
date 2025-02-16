@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-secondary);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -10,9 +10,6 @@ body {
     color: var(--secondary-color);
 }
 
-.user-box {
-    font-size: 14px;
-}
 
 /* SEARCH & CONTAINER */
 .container {
@@ -21,6 +18,7 @@ body {
     font-size: 24px;
     max-width: 90%;
     min-height: 450px;
+    height: 84vh;
 }
 
 .user-search {
@@ -28,10 +26,12 @@ body {
     max-width: 300px;
     padding: 10px;
     font-size: 16px;
+    border-radius: 8px;
 }
 
 .search-button {
-    font-size: 14px;
+    font-size: 16px;
+    border-radius: 8px;
     background-color: var(--secondary-color);
     color: #EFF1F3;
     padding: 10px;

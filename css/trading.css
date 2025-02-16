@@ -1,43 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-family: var(--font-secondary);
 }
+/*main content*/
 .container {
     min-height: 80vh;
     overflow: auto;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
+
 .trading-section {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 20px;
 }
+/*seperates personal and other user inventory*/
+.inventory-container{
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+}
+/*container for all trading visuals*/
 .trade-box {
     border: 2px solid black;
     padding: 10px;
     background: #f0f0f0;
     text-align: center;
-    width: 40%;
-    min-height: 200px;
     
+}
+.offer-box{
+    display:flex;
+    overflow-x: scroll;
+    scrollbar-width: thin;
 }
 .skins-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
-    max-height: 300px;
     padding: 10px;
     overflow-y: auto;
     scrollbar-width: thin;
+    height: 34.5vh;
 }
+/*skin icons*/
 .skin {
-    min-width: 80px;
-    min-height: 80px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
     margin: 5px;
     background: lightgray;
     border: 2px solid black;
@@ -52,8 +68,14 @@ body {
     cursor: pointer;
 }
 
-.offer-box{
-    display:flex;
-    overflow-x: scroll;
-    scrollbar-width: thin;
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .trading-section {
+        flex-direction: column;
+        
+    }
+    .inventory-container{
+        width: 75%;
+        margin: 0 auto;
+    }
 }

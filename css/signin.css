@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background: rgba(0, 0, 0, 0.5);
     color:#ffffff;
     display: flex;
@@ -7,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: var(--font-secondary);
 }
 .modal {
     background: var(--primary-color);

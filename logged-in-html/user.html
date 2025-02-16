@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
-    <header class="header">
+    <!--Website Header-->
+    <header>
         <div class="home_logo_container">
             <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
             <a href="./home.html">MoreSkins</a>
@@ -16,8 +18,10 @@
         <div class="nav-box">
             <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
+        </div>
+        <div class="search-box">
             <input type="text" class="search-bar" placeholder="Search User">
-            <a class="crates-btn" href="./user.html">Search</a>
+            <a class="logout-btn" href="./user.html">Search</a>
         </div>
         <div class="user-box">
             <span>Balance: $0.10</span>
@@ -25,12 +29,19 @@
         </div>
     </header>
     
+    <!--Content Body-->
     <div class="container">
+        <!--Username and Inventory Sumamry-->
         <div class="profile-section">
-            <h2>sbomb100</h2>
-            <p>Total Worth: $5.23</p>
-            <a style="color: floralwhite;background-color: var(--secondary-color); padding: 5px;" href="./trading.html">Send Trade Offer</a>
-            
+            <!--profile header-->
+            <div class="profile-header">
+                <h2>sbomb100</h2>
+                <div class="worth">
+                    <p>Total Worth: $5.23</p>
+                    <a href="./trading.html">Send Trade Offer</a>
+                </div>
+            </div>
+            <!--User's Showcase of Favorite Items-->
             <div class="showcase">
                 <h3>sbomb100's Showcase</h3>
                 <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
@@ -39,6 +50,7 @@
                 <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
             </div>
             
+            <!--Feed of Recent Aqcuesitions-->
             <div class="recent-activity">
                 <h3>sbomb100's Recent Activity</h3>
                 <div class="activity-flex">
@@ -65,12 +77,15 @@
                 </div>
             </div>
         </div>
-        <div class="ad-container">
+
+        <!--2 filler Ads-->
+        <aside class="ad-container">
             <img></img>
             <img></img>
-        </div>
+        </aside>
     </div>
     
+    <!--Popup Windows-->
     <div id="dropChancePopup" class="popup">
         <strong>Percent Drop Chance</strong>
         <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
@@ -84,12 +99,14 @@
         <button onclick="closePopup('tradeRequestPopup')">Close</button>
     </div>
     
-    <div class="footer">
-        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
-        <span>Copyright Label</span>
-        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
-    </div>
+    <!--Footer-->
+    <footer>
+        <button id="drop" onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span id="copyright">Copyright Label</span>
+        <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </footer>
     
+    <!--Code to deal with pop up-->
     <script>
         function openPopup(id) {
             document.getElementById(id).style.display = "block";

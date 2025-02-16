@@ -1,13 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-family: var(--font-secondary);
 }
 .container {
     padding: 20px;
+    
+    margin-bottom: 20px;
 }
 .crate {
     border: 2px solid black;

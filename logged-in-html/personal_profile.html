@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - Personal Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
-    <header class="header">
+    <!--Website Header-->
+    <header>
         <div class="home_logo_container">
             <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
             <a href="./home.html">MoreSkins</a>
@@ -16,8 +18,10 @@
         <div class="nav-box">
             <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
+        </div>
+        <div class="search-box">
             <input type="text" class="search-bar" placeholder="Search User">
-            <a class="crates-btn" href="./user.html">Search</a>
+            <a class="logout-btn" href="./user.html">Search</a>
         </div>
         <div class="user-box">
             <span>Balance: $0.10</span>
@@ -64,31 +68,34 @@
                 </div>
             </div>
         </div>
-        <div class="ad-container">
+        <aside class="ad-container">
             <img></img>
             <img></img>
         </div>
     </div>
     
-    <div id="dropChancePopup" class="popup">
+    <!--Popup Windows-->
+    <aside id="dropChancePopup" class="popup">
         <strong>Percent Drop Chance</strong>
         <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
         <button onclick="closePopup('dropChancePopup')">Close</button>
-    </div>
+    </aside>
     
-    <div id="tradeRequestPopup" class="popup">
+    <aside id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
         <p>Trade Accepted by sbomb1002</p>
         <p>Request from sbomb100</p>
         <button onclick="closePopup('tradeRequestPopup')">Close</button>
-    </div>
+    </aside>
     
-    <div class="footer">
-        <button onclick="openPopup('dropChancePopup')">Drop Chances</button>
-        <span>Copyright Label</span>
-        <button onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
-    </div>
+    <!--Footer-->
+    <footer>
+        <button id="drop" onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <span id="copyright">Copyright Label</span>
+        <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+    </footer>
     
+    <!--Code to deal with pop up-->
     <script>
         function openPopup(id) {
             document.getElementById(id).style.display = "block";

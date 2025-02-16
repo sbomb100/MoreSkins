@@ -1,57 +1,70 @@
 :root {
+    /*Global Color Palette*/
     --primary-color: #414141;
     --secondary-color: #dd1b1b;
+    --dark-secondary-color: #8d1010;
     --tertiary-color: #3a0404;
     --crate-background: #750404;
+    
+    /*Font Stuff*/
+    --font-main: 'Bebas Neue', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
     --text-color: white;
-    --font-size: 16px;
+    --font-size: 24px;
     --spacing: 10px;
 }
 * {
     box-sizing: border-box;
 }
-/* HEADER & FOOTER */
-.header, .footer {
+/* header and footer */
+header, footer {
+    font-family: var(--font-main);
+    font-size: var(--font-size);
     background: var(--tertiary-color);
     color: #EFF1F3;
-    padding: 15px;
-    width: 100vw;
+    padding: 10px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    min-height: 8vh;
 }
 
-/* LINKS */
+/* links */
 a {
     text-decoration: none;
     color: inherit;
     
 }
 
-/* BUTTON STYLES */
+/* button styles */
 button {
+    
     background: var(--secondary-color);
     border: 1px solid #000;
     color: #EFF1F3;
     padding: 8px 12px;
-    font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
+/*on hover*/
 a:hover, button:hover {
-    background: darkred;
+    background: var(--dark-secondary-color);
 }
 
-/* SEARCH BAR */
+/* search bar */
 .search-bar {
-    padding: 8px;
+    padding: 12px;
     margin: 10px 0;
     flex: 1;
-    min-width: 150px;
+    max-width: 650px;
+    border-radius: 5px;
+    
 }
 
-/* LOGO */
+/* logo */
 .logo {
     width: 60px;
     height: 60px;
@@ -60,27 +73,31 @@ a:hover, button:hover {
     border-radius: 5px;
 }
 
-/* POPUPS */
-.popup {
+/* pop ups */
+.popup{
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 5%;
     background: white;
     padding: 20px;
     border: 1px solid black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     max-width: 90%;
+    color: var(--secondary-color);
 }
-
+#dropChancePopup {
+    left: 0%;
+}
+#tradeRequestPopup{
+    right: 0%;
+}
 .popup button {
     margin-top: 10px;
 }
 
-/* FOOTER */
-.footer {
-    position: absolute;
+/* footer */
+footer {
+    position: static;
     bottom: 0;
     height: auto;
     display: flex;
@@ -89,9 +106,10 @@ a:hover, button:hover {
     flex-wrap: wrap;
 }
 
-.footer button {
+footer button {
     margin: 5px;
 }
+/*footer order*/
 #drop {
     order: 1;
 }
@@ -101,7 +119,7 @@ a:hover, button:hover {
 #trade {
     order: 3;
 }
-/* LOGO CONTAINER */
+/* logo container */
 .home_logo_container {
     align-self: flex-start;
     display: flex;
@@ -110,22 +128,26 @@ a:hover, button:hover {
     align-items: center;
 }
 
-/* NAVIGATION & USER BOX */
+/* nav and search boxes */
 .nav-box, .search-box {
+    
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 0 5%;
-    width: 50%;
+}
+.search-box{
+    width: 50%
 }
 .user-box {
     display: flex;
     align-items: center;
     margin-left: auto;
     gap: 10px;
+    
 }
 
-/* PROFILE, CRATES & LOGOUT BUTTONS */
+/* profile, crate, logout buttons */
 .profile-btn, .crates-btn, .logout-btn {
     padding: 8px 12px;
     margin: 5px;
@@ -133,32 +155,34 @@ a:hover, button:hover {
     background: var(--secondary-color);
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s ease;
+
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .header, .footer {
+/* For Shrunken Windows and Phone Display */
+@media (max-width: 800px) {
+    header, footer {
         flex-direction: column;
         text-align: center;
         
     }
     .profile-btn, .crates-btn {
-        width: 70%;
+        width: 200px;
     }
     .nav-box{
         width: 100%;
-        gap: 60%;
+        gap: 10%;
         flex-direction: row;
         justify-content: center;
     }
     .user-box {
         width: 70%;
     }
-    .search-bar {
+    .search-box {
         width: 90%;
     }
 
-    .footer {
+    footer {
         flex-direction: row;
         padding: 15px;
     }
@@ -171,7 +195,7 @@ a:hover, button:hover {
     
 }
 
-@media (max-width: 480px) {
+@media (max-width: 460px) {
     .logo {
         width: 50px;
         height: 50px;
@@ -186,11 +210,9 @@ a:hover, button:hover {
         width: 100%;
     }
     .logout-btn {
-        font-size: 12px;
         padding: 6px 10px;
     }
     .profile-btn, .crates-btn{
-        font-size: 12px;
         padding: 10px 10px;
     }
     #drop, #trade {
@@ -206,12 +228,12 @@ a:hover, button:hover {
         order: 3;
         margin: 20px auto;
     }
-    .footer {
+    footer {
         
         text-align: center;
     }
     
-    .footer button {
+    footer button {
         width: 35%;
     }
 }

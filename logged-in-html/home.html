@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
-    <header class="header">
+    <!--Website Header-->
+    <header>
         <div class="home_logo_container">
             <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
             <a href="./home.html">MoreSkins</a>
@@ -27,12 +29,14 @@
         </div>
     </header>
     
+    <!--Content Body-->
     <div class="container">
         <div class="home_logo_container" style="gap: 20px; margin: 5px;">
             <img class="logo" src="../assets/images/moreskins.png" style="width:120px; height:110px;"></img>
             <h1>MoreSkins</h1>
         </div>
         <p style="font-weight: bold;">Risk it for the Digital Biscuit</p>
+        <!--User Search-->
         <div class="home_logo_container">
             <input type="text" class="user-search" placeholder="Search for a User">
             <a class="search-button" href="user.html">Search</a>
@@ -40,6 +44,7 @@
         
     </div>
     
+    <!--Pop Up Windows-->
     <div id="dropChancePopup" class="popup">
         <strong>Percent Drop Chance</strong>
         <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
@@ -53,11 +58,12 @@
         <button onclick="closePopup('tradeRequestPopup')">Close</button>
     </div>
     
-    <div class="footer">
+    <!--Footer-->
+    <footer>
         <button id="drop" onclick="openPopup('dropChancePopup')">Drop Chances</button>
         <span id="copyright">Copyright Label</span>
         <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
-    </div>
+    </footer>
     
     <script>
         function openPopup(id) {
