@@ -9,7 +9,7 @@ body {
 }
 .container {
     padding: 20px;
-    margin: 0 30px;
+    margin: 0 10px;
     display: flex;
     flex-direction: row;
     min-height: 84vh;
@@ -95,4 +95,5 @@ body {
     .ad-container{
         display: none;
     }
+
 }
