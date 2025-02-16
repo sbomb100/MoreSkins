@@ -39,25 +39,80 @@ body {
     display:flex;
     overflow-x: scroll;
     scrollbar-width: thin;
+    height: 120px;
+    gap: 10px;
 }
 .skins-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, 110px);
     gap: 10px;
     padding: 10px;
     overflow-y: auto;
     scrollbar-width: thin;
     height: 34.5vh;
 }
-/*skin icons*/
-.skin {
+/*skin container and img*/
+.skin-container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.3s;
+}
+.skin-container img {
     min-width: 100px;
     max-width: 100px;
     min-height: 100px;
     max-height: 100px;
     margin: 5px;
-    background: lightgray;
+    background: rgb(138, 138, 138);
     border: 2px solid black;
+}
+.skin-container input[type="checkbox"] {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Custom Checkbox Design */
+.custom-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.custom-checkbox::after {
+    content: "✔";
+    font-size: 16px;
+    color: var(--secondary-color);
+    display: none;
+}
+/* When Checkbox is Checked */
+.skin-container input[type="checkbox"]:checked + .custom-checkbox {
+    background: var(--primary-color);
+    border-color: black;
+}
+
+.skin-container input[type="checkbox"]:checked + .custom-checkbox::after {
+    display: block;
+}
+
+/* Highlight Border When Selected */
+.skin-container input[type="checkbox"]:checked ~ img {
+    border: 3px solid var(--border-selected);
 }
 .trade-button {
     margin-top: 20px;

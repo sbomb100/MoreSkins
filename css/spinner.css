@@ -3,7 +3,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-family: var(--font-secondary);
 }
 
@@ -36,4 +36,8 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+}
+.skin img {
+    width: 150px;
+    height: 150px;
 }
