@@ -41,3 +41,7 @@ body {
     width: 150px;
     height: 150px;
 }
+button {
+    font-family: var(--font-secondary);
+    padding: 20px;
+}

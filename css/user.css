@@ -14,7 +14,9 @@ body {
     flex-direction: row;
     min-height: 84vh;
     font-weight: bold;
+    
 }
+
 .ad-container {
     padding: 20px;
     display: flex;
@@ -32,6 +34,7 @@ body {
 }
 .profile-section {
     flex: 1;
+    max-width: 100%;
     text-align: left;
 }
 
@@ -56,8 +59,19 @@ body {
     padding: 10px;
     margin-top: 10px;
     background: var(--tertiary-color);
+
+}
+.showcase-flex {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
 }
 
+.showcase img{
+    width:200px; 
+    height:200px; 
+    display:inline-block;
+}
 /*profile activity container*/
 .activity-flex{
     display: flex;
@@ -77,23 +91,55 @@ body {
     gap: 5px;
     padding: 20px;
     justify-content: space-between;
+    background: var(--primary-color);
     
 }
 .user-activity img {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     background: gray;
     display: inline-block;
 }
 .cost{
     margin-left: auto;
 }
-    
+
+/* For Personal Showcase Editing*/
+
+.skin-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Small "+" Button (Top-Right) */
+.add-to-show-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Button Hover Effect */
+.add-to-show-btn:hover {
+    background: var(--primary-color, #ffcc00);
+    transform: scale(1.1);
+}
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .ad-container{
         display: none;
     }
-
 }

@@ -32,36 +32,55 @@
     <div class="container">
         <div class="profile-section">
             <h2>My Profile</h2>
-            <p>Total Worth: $0.00</p>
+            <p>Total Worth: $0.01</p>
             
             <div class="showcase">
-                <h3>My Showcase</h3>
-                <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
-                <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
-                <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
-                <img class="logo" style="width:80px; height:80px; display:inline-block;"></img>
+                    <h3>My Showcase</h3>
+
+                <!--TODO make containers with buttons to remove showcase-->
+                <div class="showcase-flex">
+                    <div class="skin-container">
+                        <img alt="skin pic" src="../assets/images/skins/revolver.png">
+                        <button class="add-to-show-btn" onclick="removeFromShowcase(this)">+</button>
+                    </div>
+                    <img  alt="skin pic" src="../assets/images/skins/revolver.png">
+                    <img  alt="skin pic" src="../assets/images/skins/revolver.png">
+                    <img  alt="skin pic" src="../assets/images/skins/revolver.png">
+                </div>
             </div>
             
             <div class="recent-activity">
                 <h3>My Recent Activity</h3>
                 <div class="activity-flex">
                     <div class="user-activity">
-                        <img></img>
+                        <div class="skin-container">
+                            <img alt="skin pic" src="../assets/images/skins/revolver.png">
+                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                        </div>
+                        <span>You Unboxed a DooDoo Revolver!</span>
+                        <span class="cost">Worth: $0.01 </span>
+                    </div>
+                    <div class="user-activity">
+                        <div class="skin-container">
+                            <img alt="skin pic" src="../assets/images/skins/revolver.png">
+                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                        </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
                     </div>
                     <div class="user-activity">
-                        <img></img>
+                        <div class="skin-container">
+                            <img alt="skin pic" src="../assets/images/skins/revolver.png">
+                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                        </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
                     </div>
                     <div class="user-activity">
-                        <img></img>
-                        <span>You Unboxed a _____ </span>
-                        <span class="cost">Worth: $__ </span>
-                    </div>
-                    <div class="user-activity">
-                        <img></img>
+                        <div class="skin-container">
+                            <img alt="skin pic" src="../assets/images/skins/revolver.png">
+                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                        </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
                     </div>
@@ -69,8 +88,8 @@
             </div>
         </div>
         <aside class="ad-container">
-            <img></img>
-            <img></img>
+            <img alt="ad" src="../assets/images/ads/ad.png">
+            <img alt="ad" src="../assets/images/ads/ad.png">
         </aside>
     </div>
     
@@ -119,6 +138,20 @@
         function clearNotifications() {
             const badge = document.getElementById("notificationBadge");
             badge.classList.add("hidden"); // Hide the badge
+        }
+        function addToShowcase(button) {
+            // Replace this with actual  logic
+            console.log("Item Added to Showcase");
+
+            button.style.background = "green";
+            button.textContent = "✔";
+        }
+        function removeFromShowcase(button) {
+            // Replace this with actual  logic
+            console.log("Item Removed");
+
+            button.style.background = "red";
+            button.textContent = "X";
         }
     </script>
 </body>
