@@ -100,6 +100,9 @@ body {
     background: gray;
     display: inline-block;
 }
+.user-activity span{
+    margin-right: 10px;
+}
 .cost{
     margin-left: auto;
 }

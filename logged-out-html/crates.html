@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoreSkins</title>
+    <title>MoreSkins - Crate Opening</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/crate.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
-    <!--Website Header-->
+     <!--Website Header-->
     <header>
         <div class="home_logo_container">
             <img class="logo" alt="MoreSkinsLogo" src="../assets/images/moreskins.png">
@@ -27,23 +27,41 @@
         </div>
     </header>
     
-    <!--Content Body-->
+    
+
+    <!--Body Container for Content-->
     <div class="container">
-        <div class="home_logo_container" style="gap: 20px; margin: 5px;">
-            <img class="logo" alt="MoreSkinsLogo" src="../assets/images/moreskins.png" style="width:120px; height:110px;">
-            <h1>MoreSkins</h1>
+        <div class="crate-header">
+            <h1>The __ Crate</h1>
+            <h3 style="margin-top: 1px;">Click the Red button to Open the Crate</h3>
         </div>
-        <p style="font-weight: bold;">Risk it for the Digital Biscuit</p>
-        <!--User Search-->
-        <div class="home_logo_container">
-            <input type="text" class="user-search" placeholder="Search for a User">
-            <a class="search-button" href="user.html">Search</a>
+
+        <!--Image of Specific Crate-->
+        <img class="crate-img" src="../assets/images/crates/crate.png">
+
+        <!--Grid List of All Possible Item Drops-->
+        <div class="crate item-grid">
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item common">Common Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item uncommon">Uncommon Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item rare">Rare Item</a>
+            <a href="item.html" class="item epic">Epic Item</a>
+            <a href="item.html" class="item legendary">Legendary Item</a>            
         </div>
-        
+
+        <a class="buy-button" href="./signin.html" >Log In To Open</a>
     </div>
     
-     <!--Pop Up Windows-->
-     <div id="dropChancePopup" class="popup">
+    <!--Pop Up Windows-->
+    <div id="dropChancePopup" class="popup">
         <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
         <strong>Item Rarity Drop Chance Percent</strong>
         <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
