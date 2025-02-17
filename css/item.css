@@ -2,9 +2,10 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
     font-family: var(--font-secondary);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    
 }
 
 .container {
@@ -44,6 +45,7 @@ body {
     display: block;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    font-size: 24px;
 }
 
 /* sell button */
