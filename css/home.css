@@ -50,21 +50,6 @@ body {
     max-width: 90%;
 }
 
-/* POPUPS */
-.popup {
-    display: none;
-    position: fixed;
-    width: 80%;
-    max-width: 400px;
-    padding: 20px;
-    background: white;
-    border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 
 
 /* RESPONSIVE DESIGN */

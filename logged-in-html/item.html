@@ -12,7 +12,7 @@
     <!--Website Header-->
     <header>
         <div class="home_logo_container">
-            <img class="logo" src="../assets/images/moreskins.png" href="./home.html"></img>
+            <img class="logo" alt="MoreSkinsLogo" src="../assets/images/moreskins.png">
             <a href="./home.html">MoreSkins</a>
         </div>
         <div class="nav-box">
@@ -25,7 +25,7 @@
         </div>
         <div class="user-box">
             <span>Balance: $0.10</span>
-            <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+            <a class="logout-btn" onclick="confirmLogout(this)">Log Out</a>
         </div>
     </header>
     
@@ -40,7 +40,7 @@
                 <p>Gun Name - Skin Name</p>
                 <p>Crate Name</p>
                 <p>Estimated Value: $1.00</p>
-                <button class="sell-btn">Sell</button>
+                <button class="sell-btn" onclick="confirmSell(this)">Sell</button>
             </div>
             <aside class="ad-container">
                 <img></img>
@@ -76,6 +76,31 @@
         }
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
+        }
+        function confirmLogout(button) {
+            if (button.dataset.confirmed === "true") {
+                // Second click: Perform logout action (redirect or API call)
+                alert("Logging out...");
+                window.location.href = "../logged-out-html/home.html"; // Replace with actual logout link
+            } else {
+                // First click: Change button to confirmation state
+                button.textContent = "Confirm Logout?";
+                button.classList.add("confirm");
+                button.dataset.confirmed = "true";
+            }
+        }
+        function confirmSell(button) {
+            if (button.dataset.confirmed === "true") {
+                // Second click: Perform logout action (redirect or API call)
+                alert("Selling Item...");
+                button.textContent = "SOLD" // Replace with actual logout link
+                button.classList.remove("confirm");
+            } else {
+                // First click: Change button to confirmation state
+                button.textContent = "Confirm Sell?";
+                button.classList.add("confirm");
+                button.dataset.confirmed = "true";
+            }
         }
     </script>
 </body>

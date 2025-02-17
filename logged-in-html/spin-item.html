@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../css/spinner.css">
 </head>
 <body>
-    <!--Website Header-->
-    <header>
+     <!--Website Header-->
+     <header>
         <div class="home_logo_container">
             <img class="logo" alt="MoreSkinsLogo" src="../assets/images/moreskins.png">
             <a href="./home.html">MoreSkins</a>
@@ -25,7 +25,7 @@
         </div>
         <div class="user-box">
             <span>Balance: $0.10</span>
-            <a class="logout-btn" href="../logged-out-html/home.html">Log Out</a>
+            <a class="logout-btn" onclick="confirmLogout(this)">Log Out</a>
         </div>
     </header>
     
@@ -33,7 +33,7 @@
     <div class="container">
         <!--Crate Name, photo, and instructions -->
         <h2>Clutch Crate</h2>
-        <a href="./crates.html" class="skin" style="margin: 0 auto;">Crate Pic</a>
+        <img src="../assets/images/crates/crate.png" class="skin" style="margin: 0 auto;">
         <p>To Open the Crate, Click the Button at the Bottom</p>
         
         <!--wheel that spins to a skin -->
@@ -86,34 +86,51 @@
         </div>
     </div>
     
-    <!--Popup Windows-->
+    <!--Pop Up Windows-->
     <div id="dropChancePopup" class="popup">
-        <strong>Percent Drop Chance</strong>
-        <p>Gold: 1<br>Red: 3<br>Pink: 6<br>Purple: 20<br>Blue: 70</p>
+        <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
+        <strong>Item Rarity Drop Chance Percent</strong>
+        <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
         <button onclick="closePopup('dropChancePopup')">Close</button>
     </div>
     
     <div id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
-        <p>Trade Accepted by sbomb1002</p>
-        <p>Request from sbomb100</p>
+        <p>Trade Accepted by UserName2</p>
+        <p>Request from UserName</p>
         <button onclick="closePopup('tradeRequestPopup')">Close</button>
     </div>
     
     <!--Footer-->
     <footer>
-        <button id="drop" onclick="openPopup('dropChancePopup')">Drop Chances</button>
+        <button id="drop" onclick="openPopup('dropChancePopup')">Frequent Questions</button>
         <span id="copyright">Copyright Label</span>
         <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
+
     </footer>
     
-    <!--Temp Code until JavaScript-->
     <script>
         function openPopup(id) {
             document.getElementById(id).style.display = "block";
         }
         function closePopup(id) {
             document.getElementById(id).style.display = "none";
+        }
+        function confirmLogout(button) {
+            if (button.dataset.confirmed === "true") {
+                // Second click: Perform logout action 
+                alert("Logging out...");
+                window.location.href = "../logged-out-html/home.html";  
+            } else {
+                // First click: Change button to confirmation state
+                button.textContent = "Confirm Logout?";
+                button.classList.add("confirm");
+                button.dataset.confirmed = "true";
+            }
+        }
+        function clearNotifications() {
+            const badge = document.getElementById("notificationBadge");
+            badge.classList.add("hidden"); // Hide the badge
         }
         function startSpin() {
             const spinBox = document.getElementById("spinBox");

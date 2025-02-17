@@ -82,22 +82,54 @@ a:hover, button:hover {
     padding: 20px;
     border: 1px solid black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    max-width: 90%;
+    text-wrap: wrap;
     color: var(--secondary-color);
     font-family: var(--font-secondary) !important;
-    
+}
+.btn-container {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    padding: 1% 1%;
+    font-size: 20px;
+    font-family: var(--font-main) !important;
+}
+.badge {
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    background: rgb(255, 0, 0);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Hide badge when no notifications */
+.badge.hidden {
+    display: none;
 }
 #dropChancePopup {
-    left: 0%;
+    left: 5%;
+    width: 300px;
 }
 #tradeRequestPopup{
-    right: 0%;
+    right: 5%;
 }
 .popup button {
     
     margin-top: 10px;
 }
+.confirm {
+    background-color: orange;
+}
 
+.confirm:hover {
+    background-color: rgb(209, 116, 2);
+}
 /* footer */
 footer {
     position: static;
@@ -116,6 +148,7 @@ footer button {
     font-size: 20px;
     font-family: var(--font-main) !important;
 }
+
 /*footer order*/
 #drop {
     order: 1;
@@ -224,7 +257,9 @@ footer button {
     }
     #drop, #trade {
         height: 50px;
+        
     }
+    
     #drop {
         order: 1;
     }
@@ -236,11 +271,11 @@ footer button {
         margin: 20px auto;
     }
     footer {
-        
         text-align: center;
     }
     
-    footer button {
+    footer  button {
         width: 35%;
+        padding: 0;
     }
 }
