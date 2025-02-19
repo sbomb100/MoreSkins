@@ -7,11 +7,14 @@ body {
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
-
 .container {
     padding: 20px;
     min-height: 80vh;
     border-radius: 10px;
+}
+#crate-pic{
+    width: 200px;
+    height: 200px;
 }
 .spin-container {
     display: flex;
@@ -19,7 +22,7 @@ body {
     overflow: hidden;
     margin: 20px auto;
     border: 2px solid black;
-    background-color: #532c17;
+    background-color: var(--tertiary-color);
     padding: 10px;
     width: 80%;
 }
@@ -27,9 +30,9 @@ body {
     display: flex;
     transition: transform 5s ease-out;
 }
-.skin {
-    width: 150px;
-    height: 150px;
+.spin-container img {
+    width: 250px;
+    height: 250px;
     border: 2px solid black;
     background: #fceeee;
     margin: 0 10px;
@@ -37,10 +40,6 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-}
-.skin img {
-    width: 150px;
-    height: 150px;
 }
 button {
     font-family: var(--font-main);

@@ -35,7 +35,7 @@ body {
 }
 .profile-section {
     flex: 1;
-    max-width: 100%;
+    max-width: 75%;
     text-align: left;
 }
 
@@ -62,13 +62,17 @@ body {
     padding: 10px;
     margin-top: 10px;
     background: var(--tertiary-color);
-    
+    border-radius: 10px;
 
 }
 .showcase-flex {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    max-width: 97%;
+    gap:  20px;
+    overflow-x: scroll;
+    padding-left: 5px;
 }
 
 .showcase img{
@@ -83,15 +87,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    text-justify: center;
     overflow-y: scroll;
     scrollbar-width: thin;
     height: 40vh;
     margin-bottom: 20px;
-    border-radius: 10px;
-    
+    padding-left: 5px;
 }
-.user-activity {
+.activity-flex>li {
+    
     border: 1px solid #000;
     display: flex;
     align-items: center;
@@ -99,11 +102,10 @@ body {
     padding: 20px;
     justify-content: space-between;
     background: var(--primary-color);
-    box-shadow: #000;
-    
-    
+    margin-right: 10px;
+    border-radius: 10px;
 }
-.user-activity img {
+.activity-flex>li img {
     width: 120px;
     height: 120px;
     background: gray;
@@ -111,7 +113,7 @@ body {
     margin-right: 10px;
     border-radius: 10px;
 }
-.user-activity span{
+.activity-flex>li>span{
     margin-right: 10px;
     font-size: 20px;
 }
@@ -130,7 +132,7 @@ body {
 .add-to-show-btn {
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 15px;
     width: 24px;
     height: 24px;
     background: rgba(0, 0, 0, 0.7);
@@ -145,7 +147,10 @@ body {
     align-items: center;
     transition: background 0.3s, transform 0.2s;
 }
-
+.showcase .add-to-show-btn{
+    top: 5px;
+    right: 5px;
+}
 /* Button Hover Effect */
 .add-to-show-btn:hover {
     background: var(--primary-color, #ffcc00);
@@ -156,5 +161,15 @@ body {
 @media (max-width: 1200px) {
     .ad-container{
         display: none;
+    }
+    .profile-section{
+        max-width: 100%;
+    }
+    .activity-flex>li img {
+        width: 20vw;
+        height: 20vw;
+    }
+    .activity-flex>li>span {
+        font-size: 16px;;
     }
 }
