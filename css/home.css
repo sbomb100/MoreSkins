@@ -14,25 +14,24 @@ body {
 /* SEARCH & CONTAINER */
 .container {
     padding: 20px;
-    padding-top: 5%;
+    padding-top: 10%;
     font-size: 24px;
     max-width: 90%;
     min-height: 450px;
     height: 81vh;
     justify-content: center;
-    align-content: center;
 }
 
 .user-search {
     width: 100%;
     max-width: 300px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 8px;
 }
 
 .search-button {
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 8px;
     background-color: var(--secondary-color);
     color: #EFF1F3;
