@@ -3,6 +3,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
+    background-image: var(--background-gradient);
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
@@ -42,6 +43,7 @@ body {
     height: 150px;
 }
 button {
-    font-family: var(--font-secondary);
+    font-family: var(--font-main);
+    font-size: 28px;;
     padding: 20px;
 }

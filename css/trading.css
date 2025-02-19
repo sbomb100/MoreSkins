@@ -3,6 +3,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
+    background-image: var(--background-gradient);
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
@@ -118,11 +119,11 @@ body {
 .trade-button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 28px;
     background: var(--secondary-color);
     border: none;
     cursor: pointer;
-    font-family: var(--font-secondary);
+    font-family: var(--font-main);
 }
 
 /* RESPONSIVE DESIGN */

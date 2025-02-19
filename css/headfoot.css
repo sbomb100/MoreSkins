@@ -1,6 +1,7 @@
 :root {
     /*Global Color Palette*/
     --primary-color: #414141;
+    --background-gradient: linear-gradient(rgb(110, 110, 110), rgb(0, 0, 0));
     --secondary-color: #dd1b1b;
     --dark-secondary-color: #8d1010;
     --tertiary-color: #3a0404;
@@ -20,7 +21,7 @@
 header, footer {
     font-family: var(--font-main);
     font-size: var(--font-size);
-    background: var(--tertiary-color);
+     background: var(--tertiary-color); 
     color: #EFF1F3;
     padding: 10px;
     width: 100%;
@@ -29,7 +30,6 @@ header, footer {
     align-items: center;
     min-height: 8vh;
 }
-
 /* links */
 a {
     text-decoration: none;

@@ -4,6 +4,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
+    background-image: var(--background-gradient);
     color: var(--text-color);
 }
 .container {
@@ -23,7 +24,7 @@ body {
 
 .crate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,  minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill,  minmax(200px, 1fr));
     max-width: 75%;
     max-height: 60vh;
     overflow-y: scroll;
@@ -42,6 +43,7 @@ body {
     background: #fceeee;
     text-align: center;
     margin: auto;
+    
 }
 .crate-box{
     display: flex;
@@ -56,5 +58,7 @@ body {
     margin: auto;
     background-color: #bb0909;
     border-radius: 5px;
-    width: 120px;
+    width: 140px;
+    font-family: var(--font-main);
+    font-size: 20px;
 }

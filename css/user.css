@@ -3,6 +3,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--primary-color);
+    background-image: var(--background-gradient);
     color: var(--secondary-color);
     font-family: var(--font-secondary);
     color: var(--text-color);
@@ -52,6 +53,8 @@ body {
     margin: auto 0;
     padding: 10px;
     font-size: 20px;
+    font-weight: normal;
+    font-family: var(--font-main);
 }
 /*content container*/
 .showcase, .recent-activity {
@@ -59,6 +62,7 @@ body {
     padding: 10px;
     margin-top: 10px;
     background: var(--tertiary-color);
+    
 
 }
 .showcase-flex {
@@ -71,37 +75,45 @@ body {
     width:200px; 
     height:200px; 
     display:inline-block;
+    
+    border-radius: 10px;
 }
 /*profile activity container*/
 .activity-flex{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 7px;
     text-justify: center;
     overflow-y: scroll;
     scrollbar-width: thin;
     height: 40vh;
     margin-bottom: 20px;
+    border-radius: 10px;
     
 }
 .user-activity {
     border: 1px solid #000;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     padding: 20px;
     justify-content: space-between;
     background: var(--primary-color);
+    box-shadow: #000;
+    
     
 }
 .user-activity img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background: gray;
     display: inline-block;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 .user-activity span{
     margin-right: 10px;
+    font-size: 20px;
 }
 .cost{
     margin-left: auto;

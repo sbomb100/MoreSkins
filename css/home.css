@@ -7,9 +7,9 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--primary-color);
+    background-image: var(--background-gradient);
     color: var(--text-color);
 }
-
 
 /* SEARCH & CONTAINER */
 .container {
@@ -18,7 +18,9 @@ body {
     font-size: 24px;
     max-width: 90%;
     min-height: 450px;
-    height: 84vh;
+    height: 81vh;
+    justify-content: center;
+    align-content: center;
 }
 
 .user-search {
@@ -38,6 +40,7 @@ body {
     display: block;
     margin: 10px auto;
     width: 150px;
+    font-family: var(--font-main);
 }
 
 /* BOXES */
