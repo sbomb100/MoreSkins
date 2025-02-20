@@ -43,7 +43,10 @@ body {
 }
 
 
-
+#home-logo{
+    width:8em;
+    height:7em;
+}
 
 /* smaller windows */
 @media (max-width: 768px) {

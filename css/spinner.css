@@ -17,6 +17,8 @@ body {
 #crate-pic{
     width: 15em;
     height: 15em;
+    margin: 0 auto;
+    border-radius: 1em;
 }
 /*container that holds skins and will rotate through them*/
 .spin-container {

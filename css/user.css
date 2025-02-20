@@ -55,6 +55,7 @@ body {
     font-size: 1em;
     font-weight: normal;
     font-family: var(--font-main);
+    border-radius: .4em;
 }
 /*content container*/
 .showcase, .recent-activity {

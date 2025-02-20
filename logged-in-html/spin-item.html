@@ -35,7 +35,7 @@
         <!--Crate Name, photo, and instructions -->
         <div>
             <h1>Temp Crate</h1>
-            <img id="crate-pic" alt="picture of crate" src="../assets/images/crates/crate.png" style="margin: 0 auto; border-radius: 10px;">
+            <img id="crate-pic" alt="picture of crate" src="../assets/images/crates/crate.png">
             <h3>To Open the Crate, Click the Button at the Bottom</h3>
         </div>
         
@@ -84,7 +84,7 @@
 
             </div>
         </div>
-        <i style="margin-bottom: 20px; font-size: 40px;" class="fa-solid fa-arrow-up-long"></i>
+        <i style="margin-bottom: .4em; font-size: 3em;" class="fa-solid fa-arrow-up-long"></i>
         <!--spin button -->
         <div class="buttons">
             <!--on click spin the wheel, later will involve balance checking -->
@@ -142,7 +142,7 @@
         function startSpin() {
             const spinBox = document.getElementById("spinBox");
             let randomOffset = -((Math.floor(Math.random() * 5)) * 170); // Adjust for skin width + margin
-            spinBox.style.transform = `translateX(${randomOffset}px)`;
+            spinBox.style.transform = `translateX(${randomOffset * .1}em)`;
         }
     </script>
 </body>
