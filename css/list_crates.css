@@ -12,12 +12,16 @@ body {
     padding: 20px;
     height: 84vh;
 }
-
+.content-header{
+    text-align: left;
+    margin: 0 auto;
+    max-width: calc(250px * 4 + 10px * 3);
+}
 /*grid box of crates*/
 .crate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
-    max-width: calc(250px * 4 + 10px * 3);;
+    max-width: calc(250px * 4 + 10px * 3);
     width: auto;
     max-height: 60vh;
     overflow-y: scroll;
