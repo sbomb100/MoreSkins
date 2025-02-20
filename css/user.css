@@ -17,7 +17,7 @@ body {
     font-weight: bold;
     
 }
-
+/*ads*/
 .ad-container {
     padding: 20px;
     display: flex;
@@ -33,6 +33,7 @@ body {
     display: inline-block;
    
 }
+/*profile container*/
 .profile-section {
     flex: 1;
     max-width: 75%;
@@ -65,6 +66,7 @@ body {
     border-radius: 10px;
 
 }
+/*upper showcase content*/
 .showcase-flex {
     display: flex;
     padding-bottom: 20px;
@@ -122,14 +124,14 @@ body {
     margin-left: auto;
 }
 
-/* For Personal Showcase Editing*/
+/* personal showcase editing*/
 
 .skin-container {
     position: relative;
     display: inline-block;
 }
 
-/* Small "+" Button (Top-Right) */
+/* adding small + in top corner */
 .add-to-show-btn {
     position: absolute;
     top: 5px;
@@ -152,13 +154,12 @@ body {
     top: 5px;
     right: 5px;
 }
-/* Button Hover Effect */
 .add-to-show-btn:hover {
     background: var(--primary-color, #ffcc00);
     transform: scale(1.1);
 }
 
-/* RESPONSIVE DESIGN */
+/* for smaller windows*/
 @media (max-width: 1200px) {
     .ad-container{
         display: none;

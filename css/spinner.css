@@ -7,17 +7,21 @@ body {
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
+/*body container*/
 .container {
     padding: 20px;
     min-height: 80vh;
     border-radius: 10px;
 }
+/*picture of chosen crate*/
 #crate-pic{
     width: 200px;
     height: 200px;
 }
+/*container that holds skins and will rotate through them*/
 .spin-container {
     display: flex;
+    border-radius: 10px;
     justify-content: center;
     overflow: hidden;
     margin: 20px auto;
@@ -26,6 +30,7 @@ body {
     padding: 10px;
     width: 80%;
 }
+/*the box that actually rotates through the container*/
 .spin-box {
     display: flex;
     transition: transform 5s ease-out;
@@ -41,6 +46,7 @@ body {
     justify-content: center;
     font-weight: bold;
 }
+/*spin the wheel button*/
 button {
     font-family: var(--font-main);
     font-size: 28px;;

@@ -11,7 +11,7 @@ body {
     color: var(--text-color);
 }
 
-/* SEARCH & CONTAINER */
+/* body content*/
 .container {
     padding: 20px;
     padding-top: 10%;
@@ -22,6 +22,7 @@ body {
     justify-content: center;
 }
 
+/*search content*/
 .user-search {
     width: 100%;
     max-width: 300px;
@@ -42,19 +43,10 @@ body {
     font-family: var(--font-main);
 }
 
-/* BOXES */
-.box {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px auto;
-    text-align: left;
-    display: block;
-    max-width: 90%;
-}
 
 
 
-/* RESPONSIVE DESIGN */
+/* smaller windows */
 @media (max-width: 768px) {
    
 

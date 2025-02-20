@@ -8,7 +8,7 @@ body {
     background-image: var(--background-gradient);
     
 }
-
+/*Viewing/ Selling an Item Page*/
 .container {
     padding: 20px;
     min-height: 84vh;

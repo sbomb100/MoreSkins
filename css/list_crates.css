@@ -7,25 +7,18 @@ body {
     background-image: var(--background-gradient);
     color: var(--text-color);
 }
+/*grid of crates page*/
 .container {
     padding: 20px;
     height: 84vh;
 }
-.search-bar, .user-search {
-    width: 50%;
-    padding: 8px;
-    margin: 10px 0;
-}
 
-.home_logo_container{
-    align-self: center;
-    display: flex;
-}
-
+/*grid box of crates*/
 .crate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,  minmax(200px, 1fr));
-    max-width: 75%;
+    grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
+    max-width: calc(250px * 4 + 10px * 3);;
+    width: auto;
     max-height: 60vh;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -35,6 +28,16 @@ body {
     background: var(--tertiary-color);
     padding: 20px;
     border-radius: 10px;
+}
+/*crate list element*/
+li {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--crate-background);
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    margin: auto;
 }
 li img {
     border: 2px solid rgb(0, 0, 0);
@@ -46,14 +49,6 @@ li img {
     margin: auto;
     
 }
-li {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--crate-background);
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-}
 li button{
     margin: auto;
     background-color: #bb0909;
@@ -62,3 +57,5 @@ li button{
     font-family: var(--font-main);
     font-size: 20px;
 }
+
+/*no need for media query*/

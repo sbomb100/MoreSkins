@@ -7,9 +7,18 @@ body {
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
+/*body content*/
 .container {
     padding: 20px;
     margin-bottom: 20px;
+}
+/*crate item container*/
+.crate-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
 }
 .crate {
     border: 2px solid black;
@@ -25,6 +34,7 @@ body {
     display: inline-block;
     border-radius: 10px;
 }
+/*grid of skins*/
 .item-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -36,26 +46,23 @@ body {
     margin-bottom: 40px; /* temp for while red button is an a item */
     max-width: 55%;
 }
+/*weapon container*/
 .item {
     padding: 40px 30px;
     text-align: center;
     font-weight: bold;
     color: rgb(34, 4, 141);
 }
-.crate-header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-}
+
+/*open crate/buy crate button*/
 .buy-button{
     background-color: #ff0000;
     color:#ffffff;
-    font-weight: bold;
     padding: 20px 10px;
     margin-top: 20px;
-    border-radius: 10px;;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: var(--font-main);
 }
 
 /* all the different rarities as color classes. will be borders for images later*/

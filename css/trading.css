@@ -37,6 +37,7 @@ body {
     text-align: center;
     
 }
+/*box of skins chosen to be offered*/
 .offer-box{
     display:flex;
     overflow-x: scroll;
@@ -44,6 +45,7 @@ body {
     height: 120px;
     gap: 10px;
 }
+/*grid for skins in a users*/
 .skins-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 110px);
@@ -72,6 +74,8 @@ body {
     background: rgb(138, 138, 138);
     border: 2px solid black;
 }
+
+/* check box */
 .skin-container input[type="checkbox"] {
     position: absolute;
     top: 10px;
@@ -81,7 +85,6 @@ body {
     opacity: 0;
     cursor: pointer;
 }
-/* Custom Checkbox Design */
 .custom-checkbox {
     position: absolute;
     top: 10px;
@@ -96,26 +99,29 @@ body {
     align-items: center;
     transition: 0.3s;
 }
+/*after click, put check*/
 .custom-checkbox::after {
     content: "✔";
     font-size: 16px;
-    color: var(--secondary-color);
+    color: white;
     display: none;
 }
-/* When Checkbox is Checked */
+
+/* highlight item when clicked */
+.skin-container input[type="checkbox"]:checked ~ img {
+    border: 3px solid var(--secondary-color);
+}
+/* box checked*/
 .skin-container input[type="checkbox"]:checked + .custom-checkbox {
     background: var(--primary-color);
     border-color: black;
 }
-
+/*display for checkbox*/
 .skin-container input[type="checkbox"]:checked + .custom-checkbox::after {
     display: block;
 }
 
-/* Highlight Border When Selected */
-.skin-container input[type="checkbox"]:checked ~ img {
-    border: 3px solid var(--border-selected);
-}
+/* bottom button for trading */
 .trade-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -126,7 +132,7 @@ body {
     font-family: var(--font-main);
 }
 
-/* RESPONSIVE DESIGN */
+/* for smaller window */
 @media (max-width: 768px) {
     .trading-section {
         flex-direction: column;

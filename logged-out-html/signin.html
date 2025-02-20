@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login or Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/signin.css">
     <link rel="stylesheet" href="../css/headfoot.css">
 </head>
 <body>
     <div class="modal">
-        <span class="close">&times;</span>
         <h2>Sign Up</h2>
         <form class="input-group">
             <label>Username</label>
@@ -21,7 +21,7 @@
             <input type="password" placeholder="Password">
             <span class="error">Password Invalid</span>
         </form>
-        <button class="button">Sign Up</button>
+        <button id="signup" class="logout-btn">Sign Up</button>
         <hr>
         <h2>Log In</h2>
         <form class="input-group">
@@ -34,7 +34,7 @@
             <input type="password" placeholder="MyLegitPassword">
             <!--<span class="error">Password Invalid</span>-->
         </form>
-        <a href="../logged-in-html/home.html" class="button"  style="margin-top: 10px;">Log In</a>
+        <a id="login" class="logout-btn" href="../logged-in-html/home.html" style="margin-top: 10px;">Log In</a>
     </div>
 </body>
 </html>

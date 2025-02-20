@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: var(--font-secondary);
 }
+/*I want it to be a modal so the entire page will be a modal*/
 .modal {
     background: var(--primary-color);
     padding: 20px;
@@ -19,6 +20,7 @@ body {
 .modal h2 {
     margin: 10px 0;
 }
+/*input info*/
 .input-group {
     display: flex;
     flex-direction: column;
@@ -31,6 +33,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+/*if user or password is wrong, error*/
 .error {
     color: red;
     font-weight: bold;
@@ -38,20 +41,8 @@ body {
     margin-top: 5px;
     margin-right: auto;
 }
-.button {
-    background: var(--secondary-color);;
-    color: #EFF1F3;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-.close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    cursor: pointer;
+
+/*login and sign up buttons in modal*/
+#login, #signup{
     font-size: 20px;
-    color: red;
 }

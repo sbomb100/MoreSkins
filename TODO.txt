@@ -4,3 +4,5 @@ Move current embedded scripts into an external JS file
 move header and footer to external page so that each file does not need repeated code.
 Implement inbox notifications for trading purposes (base code is already there)
 JS code for balance manipulation
+update about section based on page
+develop trade invitation pop ups (how to accept trade?)
