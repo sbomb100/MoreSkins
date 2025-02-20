@@ -1,7 +1,7 @@
 :root {
     /*Global Color Palette*/
     --primary-color: #414141;
-    --background-gradient: linear-gradient(rgb(110, 110, 110), rgb(0, 0, 0));
+    --background-gradient: radial-gradient(rgb(110, 84, 84), rgb(14, 14, 14));
     --secondary-color: #dd1b1b;
     --dark-secondary-color: #8d1010;
     --tertiary-color: #3a0404;
@@ -16,6 +16,18 @@
 }
 * {
     box-sizing: border-box;
+}
+img {
+    transition: background 0.3s ease;
+}
+img:hover{
+    transform: scale(1.01);
+}
+button {
+    transition: background 0.3s ease;
+}
+button:hover{
+    transform: scale(1.03);
 }
 /* header and footer */
 header, footer {
