@@ -27,7 +27,7 @@ button {
     transition: background 0.3s ease;
 }
 button:hover{
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 /* header and footer */
 header, footer {
@@ -123,6 +123,8 @@ a:hover, button:hover {
 .badge.hidden {
     display: none;
 }
+
+/*pop up CSS*/
 #dropChancePopup {
     left: 5%;
     width: 300px;
@@ -200,7 +202,7 @@ footer button {
 }
 
 /* profile, crate, logout buttons */
-.profile-btn, .crates-btn, .logout-btn {
+.profile-btn, .crates-btn, .logout-btn, .search-btn {
     padding: 8px 12px;
     margin: 5px;
     border: 1px solid #000;
@@ -211,7 +213,7 @@ footer button {
 
 }
 
-/* For Shrunken Windows and Phone Display */
+/*if on a smaller device or window*/
 @media (max-width: 800px) {
     header, footer {
         flex-direction: column;
@@ -242,11 +244,24 @@ footer button {
         max-width: 80%;
         padding: 15px;
     }
-
+    /*logged out page header clean up on smaller display*/
+    .logged-out-header>.nav-box,  .logged-out-header .crates-btn{
+        order: 2;
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        gap: 0px;
+    }
+    .logged-out-header>.user-box, .logged-out-header .logout-btn{
+        order: 3;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
     
     
 }
-
+/*if on a really small device*/
 @media (max-width: 460px) {
     .logo {
         width: 50px;
@@ -261,7 +276,7 @@ footer button {
     .search-bar {
         width: 100%;
     }
-    .logout-btn {
+    .logout-btn, .search-btn {
         padding: 6px 10px;
     }
     .profile-btn, .crates-btn{
@@ -271,7 +286,7 @@ footer button {
         height: 50px;
         
     }
-    
+    /*change footer ordering*/
     #drop {
         order: 1;
     }
@@ -290,4 +305,7 @@ footer button {
         width: 35%;
         padding: 0;
     }
+
+    
+    
 }
