@@ -11,8 +11,9 @@
     --font-main: 'Bebas Neue', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
     --text-color: white;
-    --font-size: 24px;
-    --spacing: 10px;
+    --font-size: 1.6em;
+    --button-font-size: 1.2em;
+    --spacing: 1em;
 }
 * {
     box-sizing: border-box;
@@ -35,7 +36,7 @@ header, footer {
     font-size: var(--font-size);
      background: var(--tertiary-color); 
     color: #EFF1F3;
-    padding: 10px;
+    padding: .5em;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -54,9 +55,9 @@ button {
     background: var(--secondary-color);
     border: 1px solid #000;
     color: #EFF1F3;
-    padding: 8px 12px;
+    padding: .3em .4em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .5em;
     transition: background 0.3s ease;
 }
 
@@ -67,21 +68,19 @@ a:hover, button:hover {
 
 /* search bar */
 .search-bar {
-    padding: 12px;
-    margin: 10px 0;
+    padding: 1em;
     flex: 1;
-    max-width: 650px;
-    border-radius: 5px;
+    border-radius: .5em;
     
 }
 
 /* logo */
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 3em;
+    height: 3em;
     background: gray;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: .5em;
 }
 
 /* pop ups */
@@ -90,9 +89,8 @@ a:hover, button:hover {
     position: fixed;
     bottom: 5%;
     background: white;
-    padding: 20px;
+    padding: 1em;
     border: 1px solid black;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-wrap: wrap;
     color: var(--secondary-color);
     font-family: var(--font-secondary) !important;
@@ -100,22 +98,22 @@ a:hover, button:hover {
 .btn-container {
     position: relative;
     display: inline-block;
-    margin: 5px;
     padding: 1% 1%;
-    font-size: 20px;
+    font-size: var(--button-font-size);
     font-family: var(--font-main) !important;
 }
+/*forlater notifivations on trade req*/
 .badge {
     position: absolute;
     top: 2%;
     right: 0%;
     background: rgb(255, 0, 0);
     color: white;
-    font-size: 12px;
+    font-size: 1em;
     font-weight: bold;
-    padding: 4px 8px;
+    padding: .2em .4em;
     border-radius: 50%;
-    min-width: 20px;
+    min-width: 3em;
     text-align: center;
 }
 
@@ -127,15 +125,17 @@ a:hover, button:hover {
 /*pop up CSS*/
 #dropChancePopup {
     left: 5%;
-    width: 300px;
+    width: 20em;
 }
 #tradeRequestPopup{
     right: 5%;
-    width: 300px;
+    width: 20em;
 }
 .popup button {
-    
-    margin-top: 10px;
+    margin-top: 1em;
+    font-family: var(--font-main);
+    font-size: var(--button-font-size);
+    padding: 0 1em;
 }
 .confirm {
     background-color: orange;
@@ -151,15 +151,15 @@ footer {
     height: auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: .3em;
     flex-wrap: wrap;
     
 }
 
 footer button {
-    margin: 5px;
+    margin: .2em;
     padding: 1% 1%;
-    font-size: 20px;
+    font-size: 1em;
     font-family: var(--font-main) !important;
 }
 
@@ -177,8 +177,8 @@ footer button {
 .home_logo_container {
     align-self: flex-start;
     display: flex;
-    padding: 0 10px;
-    gap: 10px;
+    padding: 0 1em;
+    gap: 1em;
     align-items: center;
 }
 
@@ -187,7 +187,6 @@ footer button {
     
     display: flex;
     align-items: center;
-    gap: 10px;
     padding: 0 5%;
 }
 .search-box{
@@ -197,18 +196,18 @@ footer button {
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 10px;
+    gap: 1em;
     
 }
 
 /* profile, crate, logout buttons */
 .profile-btn, .crates-btn, .logout-btn, .search-btn {
-    padding: 8px 12px;
-    margin: 5px;
+    padding: .3em .4em;
+    margin: .4em;
     border: 1px solid #000;
     background: var(--secondary-color);
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .3em;
     transition: background 0.3s ease;
     font-family: var(--font-main);
 }
@@ -221,7 +220,7 @@ footer button {
         
     }
     .profile-btn, .crates-btn {
-        width: 200px;
+        width: 20em;
     }
     .nav-box{
         width: 100%;
@@ -238,19 +237,14 @@ footer button {
 
     footer {
         flex-direction: row;
-        padding: 15px;
-    }
-    .popup {
-        max-width: 80%;
-        padding: 15px;
+        padding: 1em;
     }
     /*logged out page header clean up on smaller display*/
     .logged-out-header>.nav-box,  .logged-out-header .crates-btn{
         order: 2;
         width: 85%;
         margin: 0 auto;
-        margin-bottom: 5px;
-        gap: 0px;
+        margin-bottom: .5em;
     }
     .logged-out-header>.user-box, .logged-out-header .logout-btn{
         order: 3;
@@ -258,32 +252,34 @@ footer button {
         margin: 0 auto;
     }
     
-    
+    #drop, #trade {
+        height: 3em;
+        width: 20%;
+        
+    }
     
 }
 /*if on a really small device*/
-@media (max-width: 460px) {
-    .logo {
-        width: 50px;
-        height: 50px;
-    }
+@media (max-width: 500px) {
+ 
 
     .nav-box {
         
-        gap: 5px;
+        gap: .3em;
     }
 
     .search-bar {
         width: 100%;
     }
     .logout-btn, .search-btn {
-        padding: 6px 10px;
+        padding: .4em .2em;
     }
     .profile-btn, .crates-btn{
-        padding: 10px 10px;
+        padding: .5em .5em;
     }
     #drop, #trade {
-        height: 50px;
+        height: 3em;
+        width: 40%;
         
     }
     /*change footer ordering*/
@@ -295,7 +291,7 @@ footer button {
     }
     #copyright {
         order: 3;
-        margin: 20px auto;
+        margin: 1em auto;
     }
     footer {
         text-align: center;
@@ -303,7 +299,6 @@ footer button {
     
     footer  button {
         width: 35%;
-        padding: 0;
     }
 
     

@@ -9,25 +9,25 @@ body {
 }
 /*body container*/
 .container {
-    padding: 20px;
+    padding: 1em;
     min-height: 80vh;
-    border-radius: 10px;
+    border-radius: 1em;
 }
 /*picture of chosen crate*/
 #crate-pic{
-    width: 200px;
-    height: 200px;
+    width: 15em;
+    height: 15em;
 }
 /*container that holds skins and will rotate through them*/
 .spin-container {
     display: flex;
-    border-radius: 10px;
+    border-radius: 1em;
     justify-content: center;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 1em auto;
     border: 2px solid black;
     background-color: var(--tertiary-color);
-    padding: 10px;
+    padding: 1em;
     width: 80%;
 }
 /*the box that actually rotates through the container*/
@@ -36,11 +36,11 @@ body {
     transition: transform 5s ease-out;
 }
 .spin-container img {
-    width: 250px;
-    height: 250px;
+    width: 15em;
+    height: 15em;
     border: 2px solid black;
     background: #fceeee;
-    margin: 0 10px;
+    margin: 0 .5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +49,6 @@ body {
 /*spin the wheel button*/
 button {
     font-family: var(--font-main);
-    font-size: 28px;;
-    padding: 20px;
+    font-size: 2em;;
+    padding: .5em;
 }
