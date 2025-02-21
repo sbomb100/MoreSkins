@@ -37,8 +37,8 @@ body {
 /*grid of skins*/
 .item-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 0.5vw;
     margin-top: 1em;
     max-height: 30em;
     overflow-y: auto;
@@ -50,6 +50,9 @@ body {
 /*weapon container*/
 .item {
     padding: 2em 2em;
+    margin: 0 auto;
+    height: 9em;
+    width: 9em;
     text-align: center;
     font-weight: bold;
     color: rgb(34, 4, 141);

@@ -37,6 +37,7 @@ body {
     background: var(--tertiary-color);
     padding: 1em;
     border-radius: 1em;
+    max-width: 70%;
 }
 /*crate list element*/
 li {
