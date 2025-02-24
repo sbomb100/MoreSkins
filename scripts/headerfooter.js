@@ -1,6 +1,12 @@
 $(document).ready(function(){
     //HEADER FOOTER CONTENT ----
     //pop up buttons - openning and closing
+    if (!localStorage.getItem("notificationCount")) {
+        localStorage.setItem("notificationCount", "0");
+    }
+    $("#notificationBadge").text(localStorage.getItem("notificationCount"));
+    
+
     $('#drop').click(function(){
         $('#dropChancePopup').toggle();
     });
@@ -8,21 +14,23 @@ $(document).ready(function(){
         button = $(this);
         badge = $("#notificationBadge");
         popup = $('#tradeRequestPopup');
+
+        let count = parseInt(localStorage.getItem("notificationCount"));
+        badge.text(count);
         //update notification badge
         if (button.data("open") == true){
-
+            localStorage.setItem("notificationCount", 0)
             button.data("open", false);
-            badge.data("count", 0);
-            badge.hide();
             popup.show();
         }
         else {
             button.data("open", true);
-            badge.text(badge.data("count"));
-            if (badge.data("count") != 0){
-                badge.show();
-            }
             popup.hide();
+        }
+        if (localStorage.getItem("notificationCount") == 0){
+            $("#notificationBadge").hide();
+        } else {
+            $("#notificationBadge").show()
         }
     });
     $('#closeAboutPopup').click(function(){
