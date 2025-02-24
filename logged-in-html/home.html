@@ -22,7 +22,7 @@
             <a class="crates-btn" href="./list_crates.html">Crates</a>
         </div>
             <form class="search-box" action="search_result.html" method="GET" id="header-search">
-                <input type="text" class="search-bar" placeholder="Search User">
+                <input type="text" name="search" class="search-bar" placeholder="Search User">
                 <button class="search-btn" type="submit">Search</button>
             </form>
         <div class="user-box">
@@ -39,9 +39,9 @@
         </div>
         <p style="font-weight: bold;">Risk it for the Digital Biscuit</p>
         <!--User Search-->
-        <form class="home_logo_container">
-            <input type="text" class="user-search" placeholder="Search for a User">
-            <a class="search-button" href="user.html">Search</a>
+        <form class="home_logo_container" action="search_result.html" method="GET">
+            <input type="text" name="search" class="user-search" placeholder="Search for a User">
+            <button class="search-btn" type="submit">Search</button>
         </form>
         
     </div>

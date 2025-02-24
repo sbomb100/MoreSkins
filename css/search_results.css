@@ -12,11 +12,51 @@ body {
 /* body content*/
 .container {
     padding: 1em;
-    padding-top: 10%;
     font-size: 1.5em;
     max-width: 90%;
     min-height: 30em;
     height: 81vh;
     display: flex;
     flex-direction: column;
+    margin-left: 3em;
+}
+
+#search-error{
+    font-weight: bolder;
+    padding: 2em 0;
+    margin: 0 auto;
+    display: hidden;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 80vh;
+    margin-bottom: 1em;
+    padding-left: .5em;
+}
+li {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    gap: .1em;
+    padding: 2em 1em;
+    justify-content: space-between;
+    background: var(--primary-color);
+    margin-right: 1em;
+    border-radius: 1em;
+}
+
+li>button {
+    padding: .3em .4em;
+    margin: .4em;
+    border: 1px solid #000;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: .3em;
+    transition: background 0.3s ease;
+    font-family: var(--font-main);
+    font-size: 1em;
 }

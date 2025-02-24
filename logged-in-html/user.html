@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - User Profile</title>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/user.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -19,13 +22,13 @@
             <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
         </div>
-        <form class="search-box">
-            <input type="text" class="search-bar" placeholder="Search User">
-            <a class="logout-btn" href="./user.html">Search</a>
-        </form>
+            <form class="search-box" action="search_result.html" method="GET" id="header-search">
+                <input type="text" name="search" class="search-bar" placeholder="Search User">
+                <button class="search-btn" type="submit">Search</button>
+            </form>
         <div class="user-box">
             <span>Balance: $0.10</span>
-            <a class="logout-btn" onclick="confirmLogout(this)">Log Out</a>
+            <a class="logout-btn">Log Out</a>
         </div>
     </header>
     
@@ -35,10 +38,10 @@
         <div class="profile-section">
             <!--profile header-->
             <div class="profile-header">
-                <h2>sbomb100</h2>
+                <h2 id="profile-username">sbomb100</h2>
                 <div class="worth">
-                    <p>Total Worth: $5.23</p>
-                    <a href="./trading.html">Send Trade Offer</a>
+                    <p id="total-val"></p>
+                    <button id="trade-offer-btn">Send Trade Offer</button>
                 </div>
             </div>
             <!--User's Showcase of Favorite Items-->
@@ -65,22 +68,22 @@
                     <li>
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
                         <span>sbomb100 Unboxed a _____ </span>
-                        <span class="cost">Worth: $__ </span>
+                        <span class="cost" data-worth="0.10">Worth: $0.10 </span>
                     </li>
                     <li>
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
                         <span>sbomb100 Unboxed a _____ </span>
-                        <span class="cost">Worth: $__ </span>
+                        <span class="cost" data-worth="0.40">Worth: $0.40 </span>
                     </li>
                     <li>
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
                         <span>sbomb100 Unboxed a _____ </span>
-                        <span class="cost">Worth: $__ </span>
+                        <span class="cost" data-worth="1.20">Worth: $1.20 </span>
                     </li>
                     <li>
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
                         <span>sbomb100 Unboxed a _____ </span>
-                        <span class="cost">Worth: $__ </span>
+                        <span class="cost" data-worth="0.40">Worth: $0.40 </span>
                     </li>
                 </ul>
             </div>
@@ -98,47 +101,25 @@
         <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
         <strong>Item Rarity Drop Chance Percent</strong>
         <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
-        <button onclick="closePopup('dropChancePopup')">Close</button>
+        <button id="closeAboutPopup">Close</button>
     </div>
     
     <div id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
         <p>Trade Accepted by UserName2</p>
         <p>Request from UserName</p>
-        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+        <button id="closeTradePopup">Close</button>
     </div>
     
     <!--Footer-->
     <footer>
-        <button id="drop" onclick="openPopup('dropChancePopup')">About</button>
+        <button id="drop" >About</button>
         <span id="copyright">Copyright Label</span>
-        <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
-
+        <button id="trade">
+            Trade Requests
+            <span id="notificationBadge" class="badge">5</span>
+        </button>
     </footer>
     
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-        function confirmLogout(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action 
-                alert("Logging out...");
-                window.location.href = "../logged-out-html/home.html"; 
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Logout?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-        function clearNotifications() {
-            const badge = document.getElementById("notificationBadge");
-            badge.classList.add("hidden"); // Hide the badge
-        }
-    </script>
 </body>
 </html>
