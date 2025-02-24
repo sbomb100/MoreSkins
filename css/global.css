@@ -94,6 +94,7 @@ a:hover, button:hover {
     text-wrap: wrap;
     color: var(--secondary-color);
     font-family: var(--font-secondary) !important;
+    z-index: 1000;
 }
 .btn-container {
     position: relative;
@@ -105,15 +106,14 @@ a:hover, button:hover {
 /*forlater notifivations on trade req*/
 .badge {
     position: absolute;
-    top: 2%;
-    right: 0%;
-    background: rgb(255, 0, 0);
+    top: -.5em;
+    right: -.3em;
+    background: rgba(175, 82, 82, 0.712);
     color: white;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
-    padding: .2em .4em;
-    border-radius: 50%;
-    min-width: 3em;
+    border-radius: 100%;
+    min-width: 1em;
     text-align: center;
 }
 
@@ -175,6 +175,7 @@ footer button {
 }
 #trade {
     order: 3;
+    position: relative;
 }
 /* logo container */
 .home_logo_container {
@@ -215,6 +216,10 @@ footer button {
     font-family: var(--font-main);
 }
 
+.search-btn {
+    
+    font-size: 1em;
+}
 /*if on a smaller device or window*/
 @media (max-width: 800px) {
     header, footer {

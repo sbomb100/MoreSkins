@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins</title>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/headerfooter.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -19,13 +21,13 @@
             <a class="profile-btn" href="./personal_profile.html">Profile</a>
             <a class="crates-btn" href="./list_crates.html">Crates</a>
         </div>
-        <form class="search-box">
-            <input type="text" class="search-bar" placeholder="Search User">
-            <a class="logout-btn" href="./user.html">Search</a>
-        </form>
+            <form class="search-box" action="search_result.html" method="GET" id="header-search">
+                <input type="text" class="search-bar" placeholder="Search User">
+                <button class="search-btn" type="submit">Search</button>
+            </form>
         <div class="user-box">
             <span>Balance: $0.10</span>
-            <a class="logout-btn" onclick="confirmLogout(this)">Log Out</a>
+            <a class="logout-btn">Log Out</a>
         </div>
     </header>
     
@@ -49,47 +51,25 @@
         <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
         <strong>Item Rarity Drop Chance Percent</strong>
         <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
-        <button onclick="closePopup('dropChancePopup')">Close</button>
+        <button id="closeAboutPopup">Close</button>
     </div>
     
     <div id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
         <p>Trade Accepted by UserName2</p>
-        <p>Request from UserName</p
-        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+        <p>Request from UserName</p>
+        <button id="closeTradePopup">Close</button>
     </div>
     
     <!--Footer-->
     <footer>
-        <button id="drop" onclick="openPopup('dropChancePopup')">About</button>
+        <button id="drop" >About</button>
         <span id="copyright">Copyright Label</span>
-        <button id="trade" onclick="openPopup('tradeRequestPopup')">Trade Requests</button>
-
+        <button id="trade">
+            Trade Requests
+            <span id="notificationBadge" class="badge">5</span>
+        </button>
     </footer>
     
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-        function confirmLogout(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action 
-                alert("Logging out...");
-                window.location.href = "../logged-out-html/home.html"; 
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Logout?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-        function clearNotifications() {
-            const badge = document.getElementById("notificationBadge");
-            badge.classList.add("hidden"); // Hide the badge
-        }
-    </script>
 </body>
 </html>
