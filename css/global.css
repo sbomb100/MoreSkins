@@ -232,7 +232,7 @@ footer button {
 }
 
 /* profile, crate, logout buttons */
-.profile-btn, .crates-btn, .logout-btn, .search-btn {
+.profile-btn, .crates-btn, .logout-btn, .login-btn, .search-btn {
     padding: .3em .4em;
     margin: .4em;
     border: 1px solid #000;

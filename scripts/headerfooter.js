@@ -68,10 +68,9 @@ $(document).ready(function(){
         }
     });
     $('#closeAboutPopup').click(function(){
-        $('#dropChancePopup').fadeOut();
+        $('#dropChancePopup').hide();
     });
     $('#closeTradePopup').click(function(){
-        $('#tradeRequestPopup').fadeOut();
         close_trade()
     });
     

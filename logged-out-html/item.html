@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - Item Inspection</title>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/headerfooter.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/item.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -18,12 +20,12 @@
         <div class="nav-box">
             <a class="crates-btn" href="./list_crates.html">Crates</a>
         </div>
-        <form class="search-box">
-            <input type="text" class="search-bar" placeholder="Search User">
-            <a class="search-btn" href="./user.html">Search</a>
+        <form class="search-box" action="search_result.html" method="GET" id="header-search">
+            <input type="text" name="search" class="search-bar" placeholder="Search User">
+            <button class="search-btn" type="submit">Search</button>
         </form>
         <div class="user-box">
-            <a class="logout-btn" href="./signin.html">Log In</a>
+            <a class="login-btn" href="./signin.html">Log In</a>
         </div>
     </header>
     
@@ -52,13 +54,13 @@
         <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
         <strong>Item Rarity Drop Chance Percent</strong>
         <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
-        <button onclick="closePopup('dropChancePopup')">Close</button>
+        <button id="closeAboutPopup">Close</button>
     </div>
     
     <div id="tradeRequestPopup" class="popup">
         <strong>Trading Info</strong>
         <p>If logged in, here would be where you would see trade requests</p>
-        <button onclick="closePopup('tradeRequestPopup')">Close</button>
+        <button id="closeTradePopup">Close</button>
     </div>
     
     <!--Footer-->
@@ -67,14 +69,5 @@
         <span id="copyright">Copyright Label</span>
         <button id="trade" onclick="openPopup('tradeRequestPopup')">Trading</button>
     </footer>
-    
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-    </script>
 </body>
 </html>

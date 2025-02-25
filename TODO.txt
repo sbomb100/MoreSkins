@@ -4,11 +4,13 @@ move header and footer to external page so that each file does not need repeated
 JS code for balance manipulation
 update about section based on page
 
+fix logged in crate size <<<
 
 personal profille showcase add and removeClass
 crate fetch set up
-selling inventory check set up
+selling inventory check set up -> make balance dynamic
 spinning
-make sign in a modal pop up
+make sign in a modal pop up -> sign in form validation
 
-replace header and footer on all pages
+
+replace header and footer on all pages**

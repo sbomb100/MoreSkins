@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
-    <!--Website Header-->
-    <header>
+   <!--Website Header-->
+   <header>
         <div class="home_logo_container">
             <img class="logo" alt="MoreSkinsLogo" src="../assets/images/moreskins.png">
             <a href="./home.html">MoreSkins</a>
@@ -46,28 +46,28 @@
         
     </div>
     
-    <!--Pop Up Windows-->
-    <div id="dropChancePopup" class="popup">
+   <!--Pop Up Windows-->
+   <div id="dropChancePopup" class="popup">
         <p>If you're logged in, click "Crates" click a crate you like and spend insite currency to open it and obtain an item!</p>
         <strong>Item Rarity Drop Chance Percent</strong>
         <p style="text-align: left;">Blue: 70<br>Purple: 20<br>Pink: 6<br>Red: 3<br>Gold: 1</p>
         <button id="closeAboutPopup">Close</button>
     </div>
-    
-    <div id="tradeRequestPopup" class="popup">
+
+    <div id="tradeRequestPopup" data-open="false" class="popup">
         <strong>Trade Requests</strong>
-        <p>Trade Accepted by UserName2</p>
-        <p>Request from UserName</p>
+        <ul class="inbox-flex">
+        </ul>
         <button id="closeTradePopup">Close</button>
     </div>
-    
+
     <!--Footer-->
     <footer>
         <button id="drop" >About</button>
         <span id="copyright">Copyright Label</span>
         <button id="trade">
             Trade Requests
-            <span id="notificationBadge" class="badge">5</span>
+            <span  id="notificationBadge" class="badge"></span>
         </button>
     </footer>
     
