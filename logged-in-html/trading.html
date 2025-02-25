@@ -115,12 +115,6 @@
                 <div class="trade-box">
                     <h3>Your Offer</h3>
                     <div id="my-offer" class="offer-box">
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
                         
                     </div>
                     <span id="my-value">Total Value: $0.00</span>
@@ -130,7 +124,7 @@
             <div id="other-user-inventory" class="inventory-container">
                 <!--Other User Inventory Container-->
                 <div class="trade-box">
-                    <h3>sbomb100's Skins</h3>
+                    <h3 id="named-inventory-header">sbomb100's Skins</h3>
                     <div id="other-grid"class="skins-grid">
                         <label class="skin-container" >
                             <input type="checkbox">
@@ -169,23 +163,9 @@
                 </div>
                 <!--Other User Offer Container-->
                 <div class="trade-box">
-                    <h3>sbomb100's Offer</h3>
+                    <h3 id="named-offer-header">sbomb100's Offer</h3>
                     <div id="other-offer" class="offer-box">
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
-                        <div class="skin-container">
-                            <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-                        </div>
+                        
                     </div>
                     <span id="other-value">Total Value: $0.00</span>
                 </div>
@@ -205,8 +185,9 @@
 
     <div id="tradeRequestPopup" class="popup">
         <strong>Trade Requests</strong>
-        <p>Trade Accepted by UserName2</p>
-        <p>Request from UserName</p>
+        <ul class="inbox-flex">
+            <p>No Current Trades</p>
+        </ul>
         <button id="closeTradePopup">Close</button>
     </div>
 

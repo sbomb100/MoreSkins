@@ -83,19 +83,44 @@ a:hover, button:hover {
     border-radius: .5em;
 }
 
-/* pop ups */
+/* pop ups 
+    */
 .popup{
     display: none;
     position: fixed;
     bottom: 5%;
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 1em;
     border: 1px solid black;
     text-wrap: wrap;
     color: var(--secondary-color);
     font-family: var(--font-secondary) !important;
     z-index: 1000;
+    
 }
+.inbox-flex{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    
+    gap: .2em;
+    max-height: 20em;
+}
+
+.inbox-flex li {
+    padding: 1em;
+    background-color: var(--tertiary-color);
+    font-family: var(--font-secondary);
+    margin-right: 1em;
+    border-radius: 1em;
+    list-style-type: none;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    color: white;
+}
+
 .btn-container {
     position: relative;
     display: inline-block;
@@ -176,6 +201,7 @@ footer button {
 #trade {
     order: 3;
     position: relative;
+    
 }
 /* logo container */
 .home_logo_container {

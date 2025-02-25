@@ -5,7 +5,11 @@ $(document).ready(function(){
         localStorage.setItem("notificationCount", "0");
     }
     $("#notificationBadge").text(localStorage.getItem("notificationCount"));
-    
+    if (localStorage.getItem("notificationCount") == 0){
+        $("#notificationBadge").hide();
+    } else {
+        $("#notificationBadge").show()
+    }
 
     $('#drop').click(function(){
         $('#dropChancePopup').toggle();

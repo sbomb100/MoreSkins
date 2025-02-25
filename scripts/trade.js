@@ -7,6 +7,12 @@
  */
 
 $(document).ready(function(){ 
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get("user")
+    //check db for name
+    const name = "sbomb100"
+
+
     //in future, read user inventory from database and place items in the inventory boxes via
     /*.skins-grid . append(
     <label class="skin-container">
@@ -15,6 +21,35 @@ $(document).ready(function(){
         <img alt="skin picture" src="../assets/images/skins/revolver.png" >
     </label>
     ) */
+   
+   //check db validation later
+    if(searchQuery && name){
+        //make user IDS for easier database look up later
+        updateOffer("my-grid", "my-value", "my-offer");
+        updateOffer("other-grid", "other-value", "other-offer")
+        
+        if (name){
+            $('#named-inventory-header').text(`${name}'s Skins`);
+            $('#named-offer-header').text(`${name}'s Offer`);
+            worth = 0;
+            $(".cost").each(function(){
+                worth += parseFloat($(this).data("worth"));
+            });
+
+            $("#total-val").text(`Total Worth: $${worth.toFixed(2)}`).show();
+            $(".showcase").show();
+            $(".recent-activity").show();
+        } else {
+            $('.trading-section').empty();
+            $('.offer-button').hide();
+            $('.container h3').text("Cannot Trade With Nonexistent User");
+        }
+    } else {
+        $('.trading-section').empty();
+        $('#offer-button').hide();
+        $('container h3').text("No Given User");
+    }
+    
 
     function updateOffer(gridId, valueId, offerId) {
         $(`#${offerId}`).empty();
@@ -47,14 +82,21 @@ $(document).ready(function(){
         if (button.data("confirmed") === true) {
 
             alert("Sending Offer...");
+            let count = parseInt(localStorage.getItem("notificationCount"))
+            if (count == 0){
+                $('.inbox-flex').empty()
+            }
             //put in trade request pop ups
+            $('.inbox-flex').append(`
+                <li>Trade Sent to ${name}</li>
+                `);
             
 
             button.data("confirmed", false);
             button.text("Send Trade Offer");
             button.removeClass("confirm");
             
-            let count = parseInt(localStorage.getItem("notificationCount"))
+            
             count++;
             localStorage.setItem("notificationCount", count); // Save it
             badge.text(count);

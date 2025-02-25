@@ -26,8 +26,7 @@ $(document).ready(function(){
     }
 
     $("#trade-offer-btn").click(function() {
-        const username = $("#profile-username").text();
-        const userURL = `trading.html?user=${(username)}`;
+        const userURL = `trading.html?user=${(searchQuery)}`;
         window.location.href = userURL;
     });
 
