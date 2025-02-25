@@ -119,6 +119,7 @@ a:hover, button:hover {
     overflow-wrap: break-word;
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 .btn-container {

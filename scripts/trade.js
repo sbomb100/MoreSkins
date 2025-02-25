@@ -6,13 +6,25 @@
 </label>
  */
 
-$(document).ready(function(){ 
+$(document).ready(function(event){ 
     const urlParams = new URLSearchParams(window.location.search);
-    const searchQuery = urlParams.get("user")
+    const searchQuery = urlParams.get("user");
+    const offerType = urlParams.get("type");
     //check db for name
     const name = "sbomb100"
+    console.log(offerType)
+    //change visuals based on if its a sent request
+    if(offerType === "sent"){
+        $('.offer-button').hide();
 
+        //ignore rest, will load offer later when saved in db
+        event.preventDefault();
+    }else if(offerType === "recieved"){
+        $('#send-trade').text("Accept Trade Offer");
 
+    } else {
+        $('#deny-trade').hide();
+    }
     //in future, read user inventory from database and place items in the inventory boxes via
     /*.skins-grid . append(
     <label class="skin-container">
@@ -46,7 +58,7 @@ $(document).ready(function(){
         }
     } else {
         $('.trading-section').empty();
-        $('#offer-button').hide();
+        $('.offer-button').hide();
         $('container h3').text("No Given User");
     }
     
@@ -76,34 +88,44 @@ $(document).ready(function(){
     $("#other-grid input[type='checkbox']").change(function () {
         updateOffer("other-grid", "other-value", "other-offer");
     });
-    $(".offer-button").click(function(event){ 
+    $("#send-trade").click(function(event){ 
         button = $(this);
         badge = $("#notificationBadge");
         if (button.data("confirmed") === true) {
-
-            alert("Sending Offer...");
             let count = parseInt(localStorage.getItem("notificationCount"))
-            if (count == 0){
-                $('.inbox-flex').empty()
+            if ($("#empty-flex").length){
+                $("#empty-flex").remove();
             }
-            //put in trade request pop ups
-            $('.inbox-flex').append(`
-                <li>Trade Sent to ${name}</li>
-                `);
-            
 
-            button.data("confirmed", false);
-            button.text("Send Trade Offer");
-            button.removeClass("confirm");
+            if(offerType === "recieved"){
+                alert("Accepting Trade...");
+                button.data("confirmed", false);
+                button.text("Accepted Trade");
+                button.removeClass("confirm");
+                window.location.href="./personal_profile.html"
+            } else {
+                alert("Sending Offer...");
+                //put in trade request pop ups
+                $('.inbox-flex').append(`
+                    <li data-id="${searchQuery}" data-seen="${$('#tradeRequestPopup')
+                        .data("open")}">Trade Sent to ${name}</li>
+                    `);
+                
+                button.data("confirmed", false);
+                button.text("Send Trade Offer");
+                button.removeClass("confirm");
+
+                if (!$('#tradeRequestPopup').data("open")){
+                    count++;
+                    localStorage.setItem("notificationCount", count); // Save it
+                    badge.text(count);
+                    badge.show();
+                }
+            }
             
-            
-            count++;
-            localStorage.setItem("notificationCount", count); // Save it
-            badge.text(count);
-            badge.show();
 
         } else if ($(".skins-grid input[type='checkbox']:checked").length == 0 &&
-            $(".skins-grid input[type='checkbox']:checked").length == 0) {
+            $(".skins-grid input[type='checkbox']:checked").length == 0 && offerType !== "recieved") {
                 alert("Select Items to Trade First");
         } else {
 

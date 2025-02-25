@@ -172,7 +172,8 @@
             </div>
         </div>
         <!--ADD CONFIRMATION FOR TRADING-->
-        <button class="offer-button">Send Trade Offer</button>
+        <button id="send-trade" class="offer-button">Send Trade Offer</button>
+        <button id="deny-trade" class="offer-button">Deny Trade Offer</button>
     </div>
 
     <!--Pop Up Windows-->
@@ -183,10 +184,9 @@
         <button id="closeAboutPopup">Close</button>
     </div>
 
-    <div id="tradeRequestPopup" class="popup">
+    <div id="tradeRequestPopup" data-open="false" class="popup">
         <strong>Trade Requests</strong>
         <ul class="inbox-flex">
-            <p>No Current Trades</p>
         </ul>
         <button id="closeTradePopup">Close</button>
     </div>

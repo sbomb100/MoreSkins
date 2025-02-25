@@ -1,5 +1,14 @@
 Steps in next project:
-Change <a> links to a better routing so that I can use button objects which better define the elements
+
 move header and footer to external page so that each file does not need repeated code.
 JS code for balance manipulation
 update about section based on page
+
+
+personal profille showcase add and removeClass
+crate fetch set up
+selling inventory check set up
+spinning
+make sign in a modal pop up
+
+replace header and footer on all pages

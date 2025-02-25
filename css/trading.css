@@ -134,7 +134,9 @@ body {
     cursor: pointer;
     font-family: var(--font-main);
 }
-
+#deny-trade{
+    margin: 1em;
+}
 /* for smaller window */
 @media (max-width: 768px) {
     .trading-section {

@@ -125,43 +125,6 @@
 
     </footer>
     
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-        function confirmLogout(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action 
-                alert("Logging out...");
-                window.location.href = "../logged-out-html/home.html"; 
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Logout?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-        function clearNotifications() {
-            const badge = document.getElementById("notificationBadge");
-            badge.classList.add("hidden"); // Hide the badge
-        }
-        function addToShowcase(button) {
-            // Replace this with actual  logic
-            console.log("Item Added to Showcase");
-
-            button.style.background = "green";
-            button.textContent = "✔";
-        }
-        function removeFromShowcase(button) {
-            // Replace this with actual  logic
-            console.log("Item Removed");
-
-            button.style.background = "red";
-            button.textContent = "X";
-        }
-    </script>
+       
 </body>
 </html>

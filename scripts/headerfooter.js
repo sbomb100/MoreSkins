@@ -11,6 +11,17 @@ $(document).ready(function(){
         $("#notificationBadge").show()
     }
 
+    function close_trade(){
+        let color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-color').trim();
+        $(".inbox-flex li").each(function() {
+            console.log($(this) )
+            $(this).data("seen", true)
+            $(this).css("background-color", color);
+        });
+        $('#tradeRequestPopup').data("open", false);
+        $('#tradeRequestPopup').hide();
+    }
+
     $('#drop').click(function(){
         $('#dropChancePopup').toggle();
     });
@@ -21,17 +32,36 @@ $(document).ready(function(){
 
         let count = parseInt(localStorage.getItem("notificationCount"));
         badge.text(count);
-        //update notification badge
-        if (button.data("open") == true){
+
+        if ($("#empty-flex").length){
+            $("#empty-flex").remove();
+        }
+        else if ($(".inbox-flex").children().length == 0)
+        {
+            $(".inbox-flex").append(`
+             <p id="empty-flex">No Current Trades</p>    
+            `)
+        } 
+        //open the menu
+        if (!popup.data("open")){
+            
+            //change background on unseen messages
+            $(".inbox-flex li").each(function() {
+                console.log($(this).data("seen") )
+                if ($(this).data("seen") === false || $(this).data("seen") === "false") {
+                    $(this).css("background-color", "red");
+                }
+            }); 
+
+            //reset notifications and bring out pop up
             localStorage.setItem("notificationCount", 0)
-            button.data("open", false);
+            popup.data("open", true);
             popup.show();
         }
         else {
-            button.data("open", true);
-            popup.hide();
+            close_trade()
         }
-        if (localStorage.getItem("notificationCount") == 0){
+        if (localStorage.getItem("notificationCount") == "0"){
             $("#notificationBadge").hide();
         } else {
             $("#notificationBadge").show()
@@ -42,6 +72,7 @@ $(document).ready(function(){
     });
     $('#closeTradePopup').click(function(){
         $('#tradeRequestPopup').fadeOut();
+        close_trade()
     });
     
     $(".logout-btn").click(function(event){ 
@@ -82,4 +113,23 @@ $(document).ready(function(){
         }
     });
 
+    
+});
+
+//since they are added after load make new document
+$(document).on("click", ".inbox-flex li", function() {
+        //Trade Recived from ${name}
+        //Trade Sent to ${name}
+        let type = $(this).text().split(" ")[1].toLowerCase();
+        let name = $(this).text().split(" ")[3];
+        let user_id = $(this).attr("data-id");
+        console.log("User ID:", user_id);
+        console.log("Type:", type);
+        //check user_id with name to validate route
+        
+    if (user_id) {
+        window.location.href = `./trading.html?user=${user_id}&type=${type}`;
+    } else {
+        console.error("User ID is missing!");
+    }
 });
