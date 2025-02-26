@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login or Sign Up</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/headerfooter.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/signin.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/signin.css">
 </head>
 <body>
-    <div class="modal">
-        <h2>Sign Up</h2>
-        <form class="input-group">
-            <label>Username</label>
-            <input type="text" placeholder="Username">
-            <span class="error">User Name Taken</span>
-        </form>
-        <form class="input-group">
-            <label>Password</label>
-            <input type="password" placeholder="Password">
-            <span class="error">Password Invalid</span>
-        </form>
-        <button id="signup" class="login-btn">Sign Up</button>
-        <hr>
-        <h2>Log In</h2>
-        <form class="input-group">
-            <label>Username</label>
-            <input type="text" placeholder="ValidUsername1202">
-            <!--<span class="error">No Account with that Username</span> -->
-        </form>
-        <form class="input-group" >
-            <label>Password</label>
-            <input type="password" placeholder="MyLegitPassword">
-            <!--<span class="error">Password Invalid</span>-->
-        </form>
-        <a id="login" class="login-btn" href="../logged-in-html/home.html">Log In</a>
+    <div class="signin-body">
+        <div class="modal">
+            <h2>Sign Up</h2>
+            <form class="input-group" id="signup" method="GET">
+                <label>Username</label>
+                <input type="text" name="user-s" id="user-signup" placeholder="Username">
+                <span class="error" id="user-signup-err">User Name Taken</span>
+                <label>Password</label>
+                <input type="password" name="pass-s" id="pass-signup" placeholder="Password">
+                <span class="error" id="pass-signup-err">Password Invalid</span>
+                <button  class="form-login-btn" type="submit">Sign Up</button>
+            </form>
+            
+            <hr>
+            <h2>Log In</h2>
+            <form class="input-group" id="login" method="GET">
+                <label>Username</label>
+                <input type="text" name="user-l" id="user-login" placeholder="ValidUsername1202">
+                <span class="error" id="user-login-err">No Account with that Username</span>
+                <label>Password</label>
+                <input type="password" name="pass-l" id="pass-login" placeholder="MyLegitPassword">
+                <span class="error" id="pass-login-err">Password Invalid</span>
+                <button class="form-login-btn" type="submit">Log In</button>
+            </form>
+            
+        </div>
     </div>
 </body>
 </html>

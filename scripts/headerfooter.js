@@ -66,6 +66,12 @@ $(document).ready(function(){
         } else {
             $("#notificationBadge").show()
         }
+
+        if (!$("#empty-flex").length){
+            $(".inbox-flex").append(`
+                <p id="empty-flex">No Current Trades</p>    
+               `)
+        }
     });
     $('#closeAboutPopup').click(function(){
         $('#dropChancePopup').hide();
@@ -112,7 +118,110 @@ $(document).ready(function(){
         }
     });
 
+    // Open login modal
+    $(".login-btn").click(function(){
+        $("#modalContainer").load("signin.html", function() {
+            $(".signin-body").fadeIn();
+            
+        });
+    });
     
+    // Close modal only if clicking outside of the modal content
+    $(document).on("click", function(event){
+        if ($(event.target).is(".signin-body")) {  // Ensure only the background is targeted
+            $(".signin-body").fadeOut();
+        }
+    });
+
+    //live error prompts
+    $('#user-signup').on('input', function() {
+        var userInput = $(this).val();
+        if (userInput.length < 3) {
+            $('#user-signup-err').show(); // Show error if username is too short
+        } else {
+            $('#user-signup-err').hide(); // Hide error when input is valid
+        }
+    });
+    $('#pass-signup').on('input', function() {
+        var passwordInput = $(this).val();
+        if (passwordInput.length < 8) {
+            $('#pass-signup-err').show(); // Show error if password is too short
+        } else {
+            $('#pass-signup-err').hide(); // Hide error when input is valid
+        }
+    });
+    // Real-time validation for the Log In form
+    $('#user-login').on('input', function() {
+        var userInput = $(this).val();
+        if (userInput.length < 3) {
+            $('#user-login-err').show(); // Show error if username is too short
+        } else {
+            $('#user-login-err').hide(); // Hide error when input is valid
+        }
+    });
+    $('#pass-login').on('input', function() {
+        var passwordInput = $(this).val();
+        if (passwordInput.length < 8) {
+            $('#pass-login-err').show(); // Show error if password is too short
+        } else {
+            $('#pass-login-err').hide(); // Hide error when input is valid
+        }
+    });
+
+    //sign up submission
+    $("#signup").submit(function(event){
+         // Prevent default form submission
+
+        let username = $("input[name='user-s']").val().trim();
+        let password = $("input[name='pass'-s]").val().trim();
+        let valid = true;
+        
+        // Validate Username
+        if (username.length < 3) {
+            $("#user-signup-err").text("Username must be at least 3 characters").show();
+            valid = false;
+        }
+
+        // Validate Password
+        if (password.length < 6) {
+            $("#pass-signup-err").text("Password must be at least 6 characters").show();
+            valid = false;
+        }
+        event.preventDefault();
+        if (valid) {
+            // Simulate sending data (Replace with actual AJAX request)
+            console.log("Submitting:", { username, password });
+            window.location.href = "../logged-in-html/home.html"
+            //post response
+        }
+    });
+    //log in submission
+    $("#login").submit(function(event){
+        // Prevent default form submission
+
+       let username = $("input[name='user-l']").val().trim();
+       let password = $("input[name='pass-l']").val().trim();
+       let valid = true;
+       
+       // Validate Username
+       if (username.length < 3) {
+           $("#user-login-err").text("Username must be at least 3 characters").show();
+           valid = false;
+       }
+
+       // Validate Password
+       if (password.length < 6) {
+           $("#pass-login-err").text("Password must be at least 6 characters").show();
+           valid = false;
+       }
+       event.preventDefault();
+       if (valid) {
+           // Simulate sending data (Replace with actual AJAX request)
+           console.log("Submitting:", { username, password });
+            window.location.href = "../logged-in-html/home.html"
+           //post response
+       }
+   });
 });
 
 //since they are added after load make new document
