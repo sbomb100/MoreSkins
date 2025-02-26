@@ -5,15 +5,13 @@ move header and footer to external page so that each file does not need repeated
 update about section based on page
 
 
-personal profille showcase add and removeClass
+-- DATABASE TO DO
 crate fetch set up ~
 selling inventory check set up -> make balance dynamic (cant really do until db)
 
+--JQUERY TO DO
 spinning
-make sign in a modal pop up -> sign in form validation
-
-
-replace header and footer on all pages**
+personal profille showcase add and removeClass
 
 For DB:
 crate data -> name, skins, price, pic 

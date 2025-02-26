@@ -6,6 +6,7 @@
     <title>MoreSkins - Personal Profile</title>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
     <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/personal_profile.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -41,22 +42,15 @@
 
                 <!--TODO make containers with buttons to remove showcase-->
                 <div class="showcase-flex">
-                    <div class="skin-container">
+                    <div class="skin-container" data-inshow="true" data-id="4" >
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                        <button class="add-to-show-btn" onclick="removeFromShowcase(this)">-</button>
+                        <button class="add-to-show-btn" data-confirmed="true">-</button>
                     </div>
-                    <div class="skin-container">
+                    <div class="skin-container" data-inshow="true" data-id="3" >
                         <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                        <button class="add-to-show-btn" onclick="removeFromShowcase(this)">-</button>
+                        <button class="add-to-show-btn" data-confirmed="false">-</button>
                     </div>
-                    <div class="skin-container">
-                        <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                        <button class="add-to-show-btn" onclick="removeFromShowcase(this)">-</button>
-                    </div>
-                    <div class="skin-container">
-                        <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                        <button class="add-to-show-btn" onclick="removeFromShowcase(this)">-</button>
-                    </div>
+                    
                 </div>
             </div>
             
@@ -64,33 +58,33 @@
                 <h3>My Recent Activity</h3>
                 <ul class="activity-flex">
                     <li >
-                        <div class="skin-container">
+                        <div class="skin-container" data-inshow="true" data-id="4" >
                             <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                            <button class="add-to-show-btn" data-confirmed="true">+</button>
                         </div>
                         <span>You Unboxed a DooDoo Revolver!</span>
                         <span class="cost">Worth: $0.01 </span>
                     </li>
                     <li >
-                        <div class="skin-container">
+                        <div class="skin-container" data-inshow="true" data-id="3" >
                             <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                            <button class="add-to-show-btn" data-confirmed="false">+</button>
                         </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
                     </li>
                     <li >
-                        <div class="skin-container">
+                        <div class="skin-container" data-inshow="false" data-id="2" >
                             <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                            <button class="add-to-show-btn" data-confirmed="false">+</button>
                         </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
                     </li>
                     <li >
-                        <div class="skin-container">
+                        <div class="skin-container" data-inshow="false" data-id="1" >
                             <img alt="skin pic" src="../assets/images/skins/revolver.png">
-                            <button class="add-to-show-btn" onclick="addToShowcase(this)">+</button>
+                            <button class="add-to-show-btn" data-confirmed="false">+</button>
                         </div>
                         <span>You Unboxed a _____ </span>
                         <span class="cost">Worth: $__ </span>
