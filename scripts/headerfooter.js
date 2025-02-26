@@ -67,7 +67,7 @@ $(document).ready(function(){
             $("#notificationBadge").show()
         }
 
-        if (!$("#empty-flex").length){
+        if (!$(".inbox-flex").length){
             $(".inbox-flex").append(`
                 <p id="empty-flex">No Current Trades</p>    
                `)
