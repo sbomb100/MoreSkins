@@ -35,7 +35,9 @@ body {
 /*the box that actually rotates through the container*/
 .spin-box {
     display: flex;
-    transition: transform 5s ease-out;
+    transition: transform 4s ease-out;
+    flex-wrap: nowrap;
+    right: auto;
 }
 .spin-container img {
     width: 15em;
@@ -47,6 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    transition: transform 5s ease;
 }
 /*spin the wheel button*/
 button {
@@ -54,3 +57,5 @@ button {
     font-size: 2em;;
     padding: .5em;
 }
+
+.owned {border: 2px solid rgb(0, 255, 64);}

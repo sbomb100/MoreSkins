@@ -1,16 +1,22 @@
 Steps in next project:
 
 move header and footer to external page so that each file does not need repeated code.
-JS code for balance manipulation
+
 update about section based on page
 
-fix logged in crate size <<<
 
 personal profille showcase add and removeClass
-crate fetch set up
-selling inventory check set up -> make balance dynamic
+crate fetch set up ~
+selling inventory check set up -> make balance dynamic (cant really do until db)
+
 spinning
 make sign in a modal pop up -> sign in form validation
 
 
 replace header and footer on all pages**
+
+For DB:
+crate data -> name, skins, price, pic 
+skin data -> name, crate, price, pic, rarity, wear
+trades -> trade_id, sender, reciever, list skins sent, list skins recieved
+user -> user_id, username, password, inventorylist, trades

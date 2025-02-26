@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreSkins - Crate Opening</title>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/jquery.transit.min.js"></script>
     <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/spinner.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -36,9 +38,9 @@
     <div class="container">
         <!--Crate Name, photo, and instructions -->
         <div>
-            <h1>Temp Crate</h1>
+            <h1 id="crate-title">Temp Crate</h1>
             <img id="crate-pic" alt="picture of crate" src="../assets/images/crates/crate.png">
-            <h3>To Open the Crate, Click the Button at the Bottom</h3>
+            <h3 id="result">To Open the Crate, Click the Button</h3>
         </div>
         
         <!--wheel that spins to a skin -->
@@ -47,50 +49,15 @@
             <div class="spin-box" id="spinBox">
                 <!--wil change to li once able to link using React/JS-->
                 <!--also will remove "skin" class and just use img but its more convenient for now-->
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
-                <a href="./item.html" class="skin">
-                    <img alt="skin picture" src="../assets/images/skins/revolver.png">
-                </a>
+                
 
             </div>
         </div>
-        <i style="margin-bottom: .4em; font-size: 3em;" class="fa-solid fa-arrow-up-long"></i>
+        <i id="pointer" style="margin-bottom: .4em; font-size: 3em;" class="fa-solid fa-arrow-up-long"></i>
         <!--spin button -->
         <div class="buttons">
             <!--on click spin the wheel, later will involve balance checking -->
-            <button onclick="startSpin()">Open Crate for $0.10</button>
+            <button id="spin-btn">Open Crate for $0.10</button>
         </div>
     </div>
     
@@ -119,35 +86,6 @@
         </button>
     </footer>
     
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-        function confirmLogout(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action 
-                alert("Logging out...");
-                window.location.href = "../logged-out-html/home.html";  
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Logout?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-        function clearNotifications() {
-            const badge = document.getElementById("notificationBadge");
-            badge.classList.add("hidden"); // Hide the badge
-        }
-        //TEMPORARY, LATER WILL INVOLVE RANDOM ROLLING THE ITEM THEN DOING SPIN ANIMATION TO IT
-        function startSpin() {
-            const spinBox = document.getElementById("spinBox");
-            let randomOffset = -((Math.floor(Math.random() * 5)) * 170); // Adjust for skin width + margin
-            spinBox.style.transform = `translateX(${randomOffset * .1}em)`;
-        }
-    </script>
+    
 </body>
 </html>
