@@ -1,10 +1,3 @@
-/*
-<label class="skin-container">
-    <input type="checkbox">
-    <span class="custom-checkbox"></span>
-    <img alt="skin picture" src="../assets/images/skins/revolver.png" >
-</label>
- */
 
 $(document).ready(function(event){ 
     const urlParams = new URLSearchParams(window.location.search);

@@ -1,7 +1,4 @@
 Steps in next project:
-
-move header and footer to external page so that each file does not need repeated code.
-
 update about section based on page
 
 
@@ -9,8 +6,7 @@ update about section based on page
 crate fetch set up ~
 selling inventory check set up -> make balance dynamic (cant really do until db)
 
---JQUERY TO DO
-modal of skin pop up after spin <-
+
 
 For DB:
 crate data -> name, skins, price, pic 
