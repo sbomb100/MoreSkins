@@ -82,7 +82,7 @@ $(document).ready(function(){
         let $button = $(this);
         if ($button.data("confirmed") === true) {
             alert("Logging out...");
-            window.location.href = "../logged-out-html/home.html";
+            window.location.href = "../logged-out-html/index.html";
         } else {
             // set button to confirm state
             $button.text("Confirm Logout?");
