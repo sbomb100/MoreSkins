@@ -21,35 +21,26 @@ body {
     border-radius: 1em;
 }
 /*container that holds skins and will rotate through them*/
-.spin-container {
-    display: flex;
-    border-radius: 1em;
-    justify-content: center;
-    overflow: hidden;
-    margin: 1em auto;
-    border: 2px solid black;
-    background-color: var(--tertiary-color);
-    padding: 1em;
-    width: 80%;
-}
+
 /*the box that actually rotates through the container*/
 .spin-box {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60vw;
+    height: 25vw;;
     display: flex;
-    transition: transform 4s ease-out;
-    flex-wrap: nowrap;
-    right: auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 1em 0;
+    border-radius: 1em;
+    background-color: var(--tertiary-color);
 }
-.spin-container img {
-    width: 15em;
-    height: 15em;
-    border: 2px solid black;
-    background: #fceeee;
-    margin: 0 .5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: transform 5s ease;
+.spin-box img {
+    width: 20vw;
+    height: 20vw;
+    margin: .5em;
+    background-position: center;
+    background-size: cover;
 }
 /*spin the wheel button*/
 button {
