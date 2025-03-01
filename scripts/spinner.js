@@ -3,9 +3,11 @@ $(document).ready(function(){
     //fetch crate data
     const urlParams = new URLSearchParams(window.location.search);
     const crateName = urlParams.get("crate");
-
+    const actual_name = crateName.replace(/_/g, " ") 
+        .split(" ") 
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
     //fill with skins from case
-    const name = "Glove Case"
     const skinsByRarity = {
         "blue": ["MAG-7 | Sonar", "CZ75-Auto | Polymer", "MP7 | Cirrus", "P2000 | Turf",
             "MP9 | Sand Scale", "Glock-18 | Ironwork", "Galil AR | Black Sand"],
@@ -16,18 +18,18 @@ $(document).ready(function(){
         "gold": ["Glove Case Gloves"] //randomly roll the type if hit -> x different kinds (24 in glove case)
     };
     
-    if (name){
+    if (actual_name){
         $("#crate-title").text(name);
     }
     
     
-    //$(".spin-container").hide();
-    //$("#pointer").hide()
-    //TODO UNCOMMENT
-     //if (!crateName){
-     //    $(".container").empty();
-      //   $(".container").text("No Such Crate Found");
-     //}
+    $(".spin-box").hide();
+    $("#pointer").hide()
+    //TODO MAKE SURE MATCH CRATE IN DB
+     if (!crateName){
+         $(".container").empty();
+         $(".container").append("<h1><strong>No Such Crate Found</strong></h1>");
+     }
 
     //drop chances
     const BLUE_CHANCE = .7;
@@ -88,16 +90,6 @@ function generateSkin(){
 $(document).on("click", "#spin-btn", function() {
     console.log("start spinning");
     //bring spinner in
-    $(".spin-container").show();
-    $("#pointer").show()
-    //disable button for 5 seconds during spin
-    $("#spin-btn").prop("disabled", true);
-    $("#spin-btn").css("background-color", "grey");
-    setTimeout(() => {
-        $("#spin-btn").prop("disabled", false);
-        $("#spin-btn").css("background-color", "#dd1b1b");
-    }, 2000);
-    $("#result").text("Rolling...");
 
     //chosen skin
     //start the spin
@@ -114,7 +106,8 @@ $(document).on("click", "#spin-btn", function() {
         generateSkin(), generateSkin(), generateSkin(), 
         ];
     const soonestDrop = 5
-    const rewardIndex = Math.floor(Math.random() * (generatedskins.length - soonestDrop + 1)) + soonestDrop;
+    var rewardIndex = 0;
+    rewardIndex = Math.floor(Math.random() * (generatedskins.length - soonestDrop + 1)) + soonestDrop;
     $.each(generatedskins, function(index, value){
             imgInDB = "../assets/images/skins/revolver.png";
             //TODO switch statement for better border colors.
@@ -131,7 +124,16 @@ $(document).on("click", "#spin-btn", function() {
             }
             
     });
-    
+    $(".spin-box").show();
+    $("#pointer").show()
+    //disable button for 5 seconds during spin
+    $("#spin-btn").prop("disabled", true);
+    $("#spin-btn").css("background-color", "grey");
+    setTimeout(() => {
+        $("#spin-btn").prop("disabled", false);
+        $("#spin-btn").css("background-color", "#dd1b1b");
+    }, 2000);
+    $("#result").text("Rolling...");
     console.log(generatedskins)
         //NOTES:
         //how to make the "first item" put into the center of the carousel (also have arrow in c)
@@ -140,14 +142,14 @@ $(document).on("click", "#spin-btn", function() {
         //not fully panning, skipping to next image
         //
         var $finalSlide = $('#carousel').find('#reward');
-        var interval = window.setInterval(rotateSlides, 250)
+        var interval = window.setInterval(rotateSlides, 150)
   
         function rotateSlides(){
             var $firstSlide = $('#carousel').find('div:first');
             //moves backwards when holding the last slide
             var width = Math.round($firstSlide.width()); //247.017
             console.log(width)
-            $firstSlide.animate({marginLeft: -width}, 200, function(){
+            $firstSlide.animate({marginLeft: -width}, 100, function(){
                 var $lastSlide = $('#carousel').find('div:last')
                 $lastSlide.after($firstSlide);
                 $firstSlide.css({marginLeft: 0})
@@ -161,10 +163,15 @@ $(document).on("click", "#spin-btn", function() {
         setTimeout(() => {
             let reward = $("#reward").next().find("img").attr("alt");
             $("#result").text(reward)
+
+            value = 1.01;
             $("#modalContainer").load("skin-modal.html", function() {
+                $("#skin-name").text(reward);
+                $("#crate-name").text(actual_name);
+                $("#value").text(`Estimated Value: $${value.toFixed(2)}`);
                 $(".skin-body").fadeIn();
             });
-        }, rewardIndex*400); 
+        }, rewardIndex*375); 
     });//6 -> 17
 
 });

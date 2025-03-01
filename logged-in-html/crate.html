@@ -6,6 +6,7 @@
     <title>MoreSkins - Crate Opening</title>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
     <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/crate-nav.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/crate.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -35,7 +36,7 @@
     <!--Body Container for Content-->
     <div class="container">
         <div class="crate-header">
-            <h1>The __ Crate</h1>
+            <h1 id="crate-text">The __ Crate</h1>
             <h3>Click the Red button to Open the Crate</h3>
         </div>
 
@@ -45,23 +46,23 @@
         <!--Grid List of All Possible Item Drops-->
         <div class="crate item-grid">
             <!--will change to li once able to imbed link via React/JS-->
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item common">Common Item</a>
-            <a href="item.html" class="item uncommon">Uncommon Item</a>
-            <a href="item.html" class="item uncommon">Uncommon Item</a>
-            <a href="item.html" class="item uncommon">Uncommon Item</a>
-            <a href="item.html" class="item uncommon">Uncommon Item</a>
-            <a href="item.html" class="item rare">Rare Item</a>
-            <a href="item.html" class="item rare">Rare Item</a>
-            <a href="item.html" class="item epic">Epic Item</a>
-            <a href="item.html" class="item legendary">Legendary Item</a>            
+            <img alt="common skin" class="item common"></img>
+            <img alt="common skin" class="item common"></img>
+            <img alt="common skin" class="item common"></img>
+            <img alt="common skin" class="item common"></img>
+            <img alt="common skin" class="item common"></img>
+            <img alt="common skin" class="item common"></img>
+            <img alt="uncommon skin" class="item uncommon"></img>
+            <img alt="uncommon skin" class="item uncommon"></img>
+            <img alt="uncommon skin" class="item uncommon"></img>
+            <img alt="uncommon skin" class="item uncommon"></img>
+            <img alt="rare skin" class="item rare"></img>
+            <img alt="rare skin" class="item rare"></img>
+            <img alt="epic skin" class="item epic"></img>
+            <img alt="legendary skin" class="item legendary"></img>            
         </div>
 
-        <a class="buy-button" href="./spin-item.html" >OPEN FOR $0.10</a>
+        <button class="buy-button" >OPEN FOR $0.10</button>
     </div>
     
     <!--Pop Up Windows-->
