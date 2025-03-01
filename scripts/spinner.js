@@ -7,6 +7,9 @@ $(document).ready(function(){
         .split(" ") 
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
+
+    crateImgInDB = "../assets/images/crates/crate.png"
+    $("#crate-pic").attr("src", crateImgInDB);
     //fill with skins from case
     const skinsByRarity = {
         "blue": ["MAG-7 | Sonar", "CZ75-Auto | Polymer", "MP7 | Cirrus", "P2000 | Turf",
@@ -114,10 +117,14 @@ $(document).on("click", "#spin-btn", function() {
 
             //if its the labelled reward skin go to that
             if (index == rewardIndex){
+                
                 $("#carousel").append(`<div id="reward">
                     <img  class="skin" style="border: 3px solid ${value.rarity};" alt="${value.skin}" src="${imgInDB}">
                     </div>`);
             } else {
+                if (index == rewardIndex + 2){
+                    imgInDB = "../assets/images/skins/shotgun.png";
+                }
                 $("#carousel").append(` <div>
                     <img class="skin" style="border: 3px solid ${value.rarity};" alt="${value.skin}" src="${imgInDB}">
                     </div>`);
@@ -161,12 +168,13 @@ $(document).on("click", "#spin-btn", function() {
             
         }
         setTimeout(() => {
-            let reward = $("#reward").next().find("img").attr("alt");
-            $("#result").text(reward)
+            let reward = $("#reward").parent().children().eq(2).find("img");
+            $("#result").text(reward.attr("alt"))
 
             value = 1.01;
             $("#modalContainer").load("skin-modal.html", function() {
-                $("#skin-name").text(reward);
+                $(".item-image").attr("src", reward.attr("src"))
+                $("#skin-name").text(reward.attr("alt"));
                 $("#crate-name").text(actual_name);
                 $("#value").text(`Estimated Value: $${value.toFixed(2)}`);
                 $(".skin-body").fadeIn();

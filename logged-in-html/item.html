@@ -6,6 +6,7 @@
     <title>MoreSkins - Item Inspection</title>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
     <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/item.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/item.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -39,10 +40,10 @@
             <img class="item-image" alt="weapon skin" src="../assets/images/skins/revolver.png">
             <!--box of fetched information-->
             <div class="info-box">
-                <p>Gun Name - Skin Name</p>
-                <p>Crate Name</p>
-                <p>Estimated Value: $1.00</p>
-                <button class="sell-btn" onclick="confirmSell(this)">Sell</button>
+                <p id="skin-name">Gun Name - Skin Name</p>
+                <p id="crate-name">Crate Name</p>
+                <p id="value">Estimated Value: $1.00</p>
+                <button class="sell-btn" >Sell</button>
             </div>
             <aside class="ad-container">
                 <img alt="ad" src="../assets/images/ads/ad.png">
@@ -77,38 +78,6 @@
         </button>
     </footer>
     
-    <script>
-        function openPopup(id) {
-            document.getElementById(id).style.display = "block";
-        }
-        function closePopup(id) {
-            document.getElementById(id).style.display = "none";
-        }
-        function confirmLogout(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action (redirect or API call)
-                alert("Logging out...");
-                window.location.href = "../logged-out-html/home.html"; // Replace with actual logout link
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Logout?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-        function confirmSell(button) {
-            if (button.dataset.confirmed === "true") {
-                // Second click: Perform logout action (redirect or API call)
-                alert("Selling Item...");
-                button.textContent = "SOLD" // Replace with actual logout link
-                button.classList.remove("confirm");
-            } else {
-                // First click: Change button to confirmation state
-                button.textContent = "Confirm Sell?";
-                button.classList.add("confirm");
-                button.dataset.confirmed = "true";
-            }
-        }
-    </script>
+    
 </body>
 </html>

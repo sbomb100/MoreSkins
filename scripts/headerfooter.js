@@ -172,8 +172,8 @@ $(document).ready(function(){
     $("#signup").submit(function(event){
          // Prevent default form submission
 
-        let username = $("input[name='user-s']").val().trim();
-        let password = $("input[name='pass'-s]").val().trim();
+        let username = $("input[nameBox='user-s']").val().trim();
+        let password = $("input[nameBox='pass-s']").val().trim();
         let valid = true;
         
         // Validate Username
@@ -191,7 +191,10 @@ $(document).ready(function(){
         if (valid) {
             // Simulate sending data (Replace with actual AJAX request)
             console.log("Submitting:", { username, password });
-            window.location.href = "../logged-in-html/home.html"
+            
+            path = window.location.pathname;
+            params = window.location.search;
+            window.location.href = `../logged-in-html/${path.substring(path.lastIndexOf('/') + 1)}${params}`
             //post response
         }
     });
@@ -199,8 +202,8 @@ $(document).ready(function(){
     $("#login").submit(function(event){
         // Prevent default form submission
 
-       let username = $("input[name='user-l']").val().trim();
-       let password = $("input[name='pass-l']").val().trim();
+       let username = $("input[nameBox='user-l']").val().trim();
+       let password = $("input[nameBox='pass-l']").val().trim();
        let valid = true;
        
        // Validate Username
@@ -218,7 +221,9 @@ $(document).ready(function(){
        if (valid) {
            // Simulate sending data (Replace with actual AJAX request)
            console.log("Submitting:", { username, password });
-            window.location.href = "../logged-in-html/home.html"
+           path = window.location.pathname;
+            params = window.location.search;
+            window.location.href = `../logged-in-html/${path.substring(path.lastIndexOf('/') + 1)}${params}`
            //post response
        }
    });

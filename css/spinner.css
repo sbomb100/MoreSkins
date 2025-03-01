@@ -27,17 +27,18 @@ body {
     overflow: hidden;
     white-space: nowrap;
     width: 60vw;
-    height: 22.5vw;;
+    height: 12.5vw;;
     display: flex;
     margin: 0 auto;
     margin-bottom: 1em;
     padding: 1em 0;
+    padding-left: 0.9em;
     border-radius: 1em;
     background-color: var(--tertiary-color);
 }
 .spin-box img {
-    width: 20vw;
-    height: 20vw;
+    width: 10vw;
+    height: 10vw;
     margin: .5em;
     background-position: center;
     background-size: cover;

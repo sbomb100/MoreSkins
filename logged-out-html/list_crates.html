@@ -6,6 +6,7 @@
     <title>MoreSkins - Crate Opening</title>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
     <script src="../scripts/headerfooter.js"></script>
+    <script src="../scripts/crate-nav.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/list_crates.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -36,79 +37,89 @@
 
         <!--Grid of all the possible crates to Open-->
         <!--This will be a result of fetching the crates from an API-->
-        <ul class="crate-grid">
-            <!--Clicking the  button navigate to crate page-->
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-            <li>
-                <img class="crate" src="../assets/images/crates/crate.png">
-                <p>Crate Name</p>
-                <button onclick="window.location.href='./crate.html'">Open Crate for $00.10</button>
-            </li>
-        </ul>
+        <div class="container">
+            <!--Header for Content-->
+            <div class="content-header">
+                <h1>Crack a Crate</h1>
+                <h3>Select a Case That You Wish To Open</h3>
+            </div>
+            <!--Grid of all the possible crates to Oopen-->
+            <!--This will be a result of fetching the crates from an API-->
+            <ul class="crate-grid">
+                <!--Clicking the  button navigate to crate page-->
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+                <li>
+                    <img class="crate" alt="picture of crate" src="../assets/images/crates/crate.png">
+                    <p>Crate Name</p>
+                    <button class="crate-btn">Open Crate for $00.10</button>
+                </li>
+            </ul>
+        
+        </div>
     </div>
 
     <!--Pop Up Windows-->

@@ -1,4 +1,5 @@
-$(document).ready(function(event){ 
+$(document).ready(function(){ 
+    //TODO SET UP PAGE BASED ON USER'S PROFILE IN DB
     $(".add-to-show-btn").each(function(){
         let button = $(this)
         let container = button.closest("div");
@@ -6,10 +7,15 @@ $(document).ready(function(event){
             //SECOND CLICK ON REMOVING SHOWCASE ITEM
             button.css("background", "red");
             button.text("X");
+            
         } else if (container.attr("data-inshow")  === "false" && button.attr("data-confirmed") === "true") {
             //SECOND CLICK ON ADDING SHOWCASE ITEM
             button.css("background", "green");
             button.text("✔");
+            var storedHTML = localStorage.getItem('storedElement');
+            if (storedHTML) {
+                document.getElementById('anotherElement').innerHTML = storedHTML;
+            }
         } else if (container.attr("data-inshow")  === "true" && button.attr("data-confirmed") === "false") {
             //FIRST CLICK ON REMOVING SHOWCASE ITEM
             button.css("background", "#000000ad");
@@ -22,7 +28,6 @@ $(document).ready(function(event){
             console.log("Invalid Profile Action");
         }
     });
-    
 });
 $(document).on("click", ".add-to-show-btn", function() {
     let button = $(this)
@@ -40,6 +45,7 @@ $(document).on("click", ".add-to-show-btn", function() {
             activeButton.css("background", "#000000ad");
             activeButton.text("+");
             container.remove();
+            
         } else {
             container.attr("data-inshow", "false");
             button.attr("data-confirmed", "false");
@@ -57,6 +63,7 @@ $(document).on("click", ".add-to-show-btn", function() {
         button.text("-");
         var clonedContainer = container.clone();
         $(".showcase-flex").append(clonedContainer);
+
     } else if (container.attr("data-inshow")  === "true" && button.attr("data-confirmed") === "false") {
         //FIRST CLICK ON REMOVING SHOWCASE ITEM
         console.log("Item Removed");
