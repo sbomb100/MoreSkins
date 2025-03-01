@@ -48,7 +48,7 @@ $(document).ready(function(){
         } else if (item){
             url = `item.html?item=${(item)}`;
         } else {
-            url = "./index.html"
+            url = "./home.html"
         }
          
         window.location.href = url;
