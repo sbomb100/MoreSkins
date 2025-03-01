@@ -14,7 +14,6 @@ $(document).ready(function(){
     function close_trade(){
         let color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-color').trim();
         $(".inbox-flex li").each(function() {
-            console.log($(this) )
             $(this).data("seen", true)
             $(this).css("background-color", color);
         });
@@ -47,7 +46,6 @@ $(document).ready(function(){
             
             //change background on unseen messages
             $(".inbox-flex li").each(function() {
-                console.log($(this).data("seen") )
                 if ($(this).data("seen") === false || $(this).data("seen") === "false") {
                     $(this).css("background-color", "red");
                 }

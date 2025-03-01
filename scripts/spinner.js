@@ -3,6 +3,7 @@ $(document).ready(function(){
     //fetch crate data
     const urlParams = new URLSearchParams(window.location.search);
     const crateName = urlParams.get("crate");
+    //TODO WILL BE CHANGED TO IDS WITH DB
     const actual_name = crateName.replace(/_/g, " ") 
         .split(" ") 
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -91,7 +92,7 @@ function generateSkin(){
     }
     
 $(document).on("click", "#spin-btn", function() {
-    console.log("start spinning");
+
     //bring spinner in
 
     //chosen skin
@@ -141,7 +142,6 @@ $(document).on("click", "#spin-btn", function() {
         $("#spin-btn").css("background-color", "#dd1b1b");
     }, 2000);
     $("#result").text("Rolling...");
-    console.log(generatedskins)
         //NOTES:
         //how to make the "first item" put into the center of the carousel (also have arrow in c)
         //how to speed up the animation to be a faster without tearing
@@ -155,7 +155,7 @@ $(document).on("click", "#spin-btn", function() {
             var $firstSlide = $('#carousel').find('div:first');
             //moves backwards when holding the last slide
             var width = Math.round($firstSlide.width()); //247.017
-            console.log(width)
+
             $firstSlide.animate({marginLeft: -width}, 100, function(){
                 var $lastSlide = $('#carousel').find('div:last')
                 $lastSlide.after($firstSlide);
@@ -167,19 +167,28 @@ $(document).on("click", "#spin-btn", function() {
             })
             
         }
+        
         setTimeout(() => {
             let reward = $("#reward").parent().children().eq(2).find("img");
             $("#result").text(reward.attr("alt"))
 
-            value = 1.01;
+            const value = 1.01;
+            $("#modalContainer").hide();
             $("#modalContainer").load("skin-modal.html", function() {
+
                 $(".item-image").attr("src", reward.attr("src"))
+                console.log(reward.attr("src"))
                 $("#skin-name").text(reward.attr("alt"));
-                $("#crate-name").text(actual_name);
+                $("#crate-name").text("TEMP CASE");
                 $("#value").text(`Estimated Value: $${value.toFixed(2)}`);
-                $(".skin-body").fadeIn();
+                
+
+                $("#modalContainer").show();
+                
             });
-        }, rewardIndex*375); 
+        }, rewardIndex*350); 
+        
+        
     });//6 -> 17
 
 });

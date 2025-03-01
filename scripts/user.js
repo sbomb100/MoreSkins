@@ -1,7 +1,6 @@
 $(document).ready(function(){
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get("user");
-    console.log("Open Page");
     //account name
     if(searchQuery){
         //make user IDS for easier database look up later

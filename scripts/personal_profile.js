@@ -51,7 +51,6 @@ $(document).on("click", ".add-to-show-btn", function() {
             button.attr("data-confirmed", "false");
             button.css("background", "#000000ad");
             button.text("+");
-            console.log(container.data("id"));
             $(".showcase-flex").find(`.skin-container[data-inshow="true"][data-id="${container.data("id")}"]`).remove();
         }
         

@@ -50,7 +50,6 @@ $(document).ready(function(){
                         img_class = "item common"
                 }
                 
-                console.log(`Rarity: ${rarity}`);
                 const skins = skinsByRarity[rarity];
 
                 // Loop through the skins array for this rarity
