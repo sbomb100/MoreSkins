@@ -18,7 +18,7 @@ body {
     height: 81vh;
     display: flex;
     flex-direction: column;
-    margin-left: 3em;
+    margin-left: 1em;
 }
 
 #search-error{
@@ -36,13 +36,17 @@ body {
     height: 80vh;
     margin-bottom: 1em;
     padding-left: .5em;
+    overflow-x: hidden;
 }
 .container li {
     border: 1px solid #000;
     display: flex;
+    align-self: center;
     align-items: center;
     gap: .1em;
-    padding: 2em 1em;
+    width: 70vw;
+    height: 20vh;
+    padding:  1em;
     justify-content: space-between;
     background: var(--primary-color);
     margin-right: 1em;
