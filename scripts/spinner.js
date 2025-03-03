@@ -41,11 +41,6 @@ $(document).ready(function(){
     const PINK_CHANCE = .06;
     const RED_CHANCE = .03;
     const GOLD_CHANCE = .01;
-    /*
-    <a href="./item.html" class="skin">
-        <img class="skin" alt="${skin}" src="../assets/images/skins/revolver.png">
-    </a>
-    */ 
     
 //update this array based on the crate on doc load
 
@@ -142,12 +137,7 @@ $(document).on("click", "#spin-btn", function() {
         $("#spin-btn").css("background-color", "#dd1b1b");
     }, 2000);
     $("#result").text("Rolling...");
-        //NOTES:
-        //how to make the "first item" put into the center of the carousel (also have arrow in c)
-        //how to speed up the animation to be a faster without tearing
-        //jitter back (first item gets moved to last but still is being effected by margin)
-        //not fully panning, skipping to next image
-        //
+  
         var $finalSlide = $('#carousel').find('#reward');
         var interval = window.setInterval(rotateSlides, 150)
   
